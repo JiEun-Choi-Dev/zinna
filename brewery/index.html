@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>배상면주가</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="favicon.ico">
+        <link href="index.css" rel="stylesheet" type="text/css">
+		<link href="./js/slick.css" rel="stylesheet" type="text/css">
+		<link href="./js/slick-theme.css" rel="stylesheet" type="text/css">
+		<link href="./js/swiper.css" rel="stylesheet" type="text/css">
+		<link href="animate.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="./js/jquery-1.12.4.min.js">
+		</script>
+		<script type="text/javascript" src="./js/slick.js">		
+		</script>
+		<script type="text/javascript" src="./js/wow.min.js">		
+		</script>
+	
+		<script type="text/javascript">
+			new WOW().init();
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			//top버튼
+			if($(this).scrollTop()==0){
+					$(".totop_con").hide();
+				}
+			$(document).scroll(function(){
+				if($(this).scrollTop()>0){
+					$(".totop_con").show();
+				}
+				else{$(".totop_con").hide();
+				}
+			})
+			$(".totop_con").click(function(){
+				$("html,body").animate({
+					scrollTop:0
+				},150)
+			});
+			//슬라이드
+			$(".multiple-items2").show();
+     			$(".multiple-items1").hide();
+				 $(".multiple-items3").hide();
+				 $(".multiple-items4").hide();
+				 $(".multiple-items5").hide();
+ 
+     			$(".multiple-items9").hide();
+				 $(".multiple-items10").hide();
+				 $(".multiple-items11").hide();
+				 $(".multiple-items12").hide();
+
+				$(".swiper-container1_1").hide();
+				$(".swiper-container1_4").hide();
+				$(".swiper-container1_3").hide();
+				$(".swiper-container1_5").hide();
+			//pc메뉴
+			$(".top_nav_title,.sub_title,.top_nav,.sub_title li").mouseenter(function(){$(this).css("color","white");
+				$("ul:not(:animated), .top_nav").stop().slideDown(200);
+				$("ul:not(:animated), .top_nav_title").stop().slideDown(200);
+				$("ul:not(:animated), .sub_title").stop().slideDown(200);
+				
+			})
+			$(".top_nav,.top_nav_title,.sub_title,top_nav,.sub_title li").mouseleave(function(){$(this).css("color","white");
+				$(".sub_title").stop().slideUp(200);
+				$(".sub_title li").css("color","#dbdad8");
+			});
+			$(".sub-level").css("display","none");
+			//슬라이드 다운 초기 셋팅
+//			$(".sub").css("display","none");
+			
+		});
+		$(function() {
+			//슬라이드
+			$('.multiple-items').slick({
+				dots:true,
+				autoplay:true,
+				infinite: true,
+				slidesToShow:1,
+				slidesToScroll:1,
+				autoplaySpeed:2000,
+				speed:2000,
+				arrows:true,
+				vertical:false,
+				pauseOnHover:false,
+			});
+		
+			
+			$('.multiple-items7').slick({
+				dots:false,
+				autoplay:true,
+				infinite: true,
+				slidesToShow:1,
+				slidesToScroll:1,
+				autoplaySpeed:2000,
+				speed:2000,
+//				arrows:true,
+				vertical:false,
+				pauseOnHover:false,
+			});
+		
+			$('.multiple-items2').slick({
+				dots:true,
+				autoplay:true,
+				infinite: true,
+				slidesToShow:1,
+				slidesToScroll:1,
+				autoplaySpeed:1500,
+				speed:2000,
+				vertical:false,
+				pauseOnHover:true,
+
+			});
+		
+			$('.multiple-items1').slick({
+				dots:true,
+				autoplay:true,
+				infinite: true,
+				slidesToShow:1,
+				slidesToScroll:1,
+				autoplaySpeed:800,
+				speed:1000,
+				vertical:false,
+				pauseOnHover:true,
+
+			});
+			// tab메뉴
+				$(".product_li_1").click(function(){
+					$(".product_li_1").css("background-color","#b20000").css("color","white");
+					$(".product_li_2").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_3").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_4").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_5").css("background-color","#f2ede9").css("color","#b20000");
+					$(".multiple-items1").show();
+					$(".multiple-items2").hide();
+					$(".multiple-items3").hide();
+					$(".multiple-items4").hide();
+					$(".multiple-items5").hide();
+					$(".swiper-container1_1").show();
+					$(".swiper-container1_2").hide();
+					$(".swiper-container1_3").hide();
+					$(".swiper-container1_4").hide();
+					$(".swiper-container1_5").hide();
+					$(".controllers").show();
+				});
+	$(".product_li_2").click(function(){
+					$(".product_li_2").css("background-color","#b20000").css("color","white");
+					$(".product_li_1").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_3").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_4").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_5").css("background-color","#f2ede9").css("color","#b20000");
+					$(".multiple-items2").show();
+					$(".multiple-items1").hide();
+					$(".multiple-items3").hide();
+					$(".multiple-items4").hide();
+					$(".multiple-items5").hide();
+					$(".swiper-container1_2").show();
+					$(".swiper-container1_1").hide();
+					$(".swiper-container1_3").hide();
+					$(".swiper-container1_4").hide();
+					$(".swiper-container1_5").hide();
+					$(".controllers").show();
+				});
+		$(".product_li_3").click(function(){
+					$(".product_li_3").css("background-color","#b20000").css("color","white");
+					$(".product_li_1").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_2").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_4").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_5").css("background-color","#f2ede9").css("color","#b20000");
+					$(".multiple-items3").show();
+					$(".multiple-items1").hide();
+					$(".multiple-items2").hide();
+					$(".multiple-items4").hide();
+					$(".multiple-items5").hide();
+					$(".swiper-container1_3").show();
+					$(".swiper-container1_1").hide();
+					$(".swiper-container1_2").hide();
+					$(".swiper-container1_4").hide();
+					$(".swiper-container1_5").hide();
+					$(".controllers").hide();
+					
+				});
+	$(".product_li_4").click(function(){
+					$(".product_li_4").css("background-color","#b20000").css("color","white");
+					$(".product_li_1").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_2").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_3").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_5").css("background-color","#f2ede9").css("color","#b20000");
+					$(".multiple-items4").show();
+					$(".multiple-items1").hide();
+					$(".multiple-items2").hide();
+					$(".multiple-items3").hide();
+					$(".multiple-items5").hide();
+					$(".swiper-container1_4").show();
+					$(".swiper-container1_1").hide();
+					$(".swiper-container1_2").hide();
+					$(".swiper-container1_3").hide();
+					$(".swiper-container1_5").hide();
+					$(".controllers").hide();
+			
+				});
+	$(".product_li_5").click(function(){
+					$(".product_li_5").css("background-color","#b20000").css("color","white");
+					$(".product_li_1").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_2").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_3").css("background-color","#f2ede9").css("color","#b20000");
+					$(".product_li_4").css("background-color","#f2ede9").css("color","#b20000");
+					$(".multiple-items5").show();
+					$(".multiple-items1").hide();
+					$(".multiple-items2").hide();
+					$(".multiple-items3").hide();
+					$(".multiple-items4").hide();
+					$(".swiper-container1_5").show();
+					$(".swiper-container1_1").hide();
+					$(".swiper-container1_2").hide();
+					$(".swiper-container1_3").hide();
+					$(".swiper-container1_4").hide();
+					$(".controllers").hide();
+			
+				});
+		
+			});
+			
+			function functhisSize(){
+			var size= window.innerHeight;
+			console.log(size);
+			$("#topmenuArea").css("height",size+"px");}
+			$(function(){
+				$(window).resize(functhisSize);
+				functhisSize();
+			});
+			// 모바일 메뉴 슬라이드
+			window.onload=function(){
+				var burger = $('.menu-trigger');
+
+				burger.each(function(index){
+					var $this = $(this);
+
+					$this.on('click', function(e){
+						e.preventDefault();
+						$(this).toggleClass('active-' + (index+1));
+					})
+					});
+			}
+
+			
+			$(document).ready(function(){
+				  $('.menu-trigger').click(function(){
+					$('.slide-in-menu').toggleClass('active_1');
+				  });
+
+				  /* sub level menu display */
+
+				  $('.icon').click(function(){
+
+				   $(this).closest('.has-sub').find('.sub-level').slideToggle();   
+					var t = $(this).closest('.has-sub').find('.sub-level'); 
+					$('.sub-level').not(t).slideUp();
+				   });
+
+				});
+		</script>
+	</head>
+	<body style="overflow-x:hidden; overflow-y:auto;">
+		<header>
+			<div class="top">
+				<div class="top_menu_bg">
+					<div class="wrap">
+						<ul class="top_menu">
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+							<li><a href="#">고객센터</a></li>
+							<li><a href="#"><img src="images/search.png"  alt="search"></a></li>
+						</ul>
+						<a href="index.html"><img class="top_logo" src="images/top_logo.png" width="200px" alt="logo"></a>
+					</div>
+				</div>
+				<div class="top_nav_bg">
+					<div class="wrap">
+						<ul class="top_nav">
+							<li class="top_nav_title"><a href="#">회사소개
+								<ul class="sub_title">
+									<li><a href="brand.html">CEO 인사말</a></li>
+									<li><a href="brand.html">배상면주가의 이야기</a></li>
+									<li><a href="brand.html">배산명주가의 자취</a></li>
+									<li><a href="brand.html">찾아오시는길</a></li>
+								</ul>
+								</a></li>
+							<li class="top_nav_title"><a href="#">제품소개
+								<ul class="sub_title">
+									<li><a href="product.html">전체제품</a></li>
+									<li><a href="product.html">발효주</a></li>
+									<li><a href="product.html">증류주</a></li>
+									<li><a href="product.html">과실주</a></li>
+									<a href="product.html"><li>선물세트</li></a>
+								</ul>
+								</a></li>
+							<li class="top_nav_title"><a href="#">느린마을
+								<ul class="sub_title">
+									<li><a href="brand.html">느린마을 소개</a></li>
+									<li><a href="brand.html">느린마을 제품</a></li>
+									<li><a href="brand.html">Brewery &amp; Pub</a></li>
+									<li><a href="brand.html">판매점 및 지점</a></li>
+								</ul>
+								</a></li>
+							<li class="top_nav_title"><a href="#">알림마당
+								<ul class="sub_title">
+									<li><a href="brand.html">공지사항</a></li>
+									<li><a href="brand.html">배산명주가의 소식</a></li>
+								</ul>
+								</a></li>
+							<li class="top_nav_title"><a href="#">참여마당
+								<ul class="sub_title">
+									<li><a href="product.html">EVENT</a></li>
+									<li><a href="product.html">당첨차안내</a></li>
+									<li><a href="product.html">전통술 교육</a></li>
+									<li><a href="product.html">전통술 파티</a></li>
+								</ul>
+								</a></li>
+							<li><a href="http://www.sansawon.co.kr/">산사원 박물관</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="top_icon_bg">
+					<div class="wrap">
+						<ul class="top_icon">
+							<li class="top_icon_menu">
+								<div class="menu-trigger">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</li>
+							<li class="top_icon_logo"><a href="index.html"><img src="images/logo_icon_mobile.png" alt="logo"></a></li>	
+							<li class="top_icon_my"><a href="#"><img src="images/my_icon.png" alt="my"></a></li>
+						</ul>
+						<div class="slide-in-menu">
+							<ul class="first-level">
+								<li class="has-sub"><a href="#">회사소개<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="brand.html">CEO 인사말</a></li>
+									<li><a href="brand.html">배상면주가의 이야기</a></li>
+									<li><a href="brand.html">배산명주가의 자취</a></li>
+									<li><a href="brand.html">찾아오시는길</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">제품소개<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">전체제품</a></li>
+									<li><a href="product.html">발효주</a></li>
+									<li><a href="product.html">증류주</a></li>
+									<li><a href="product.html">과실주</a></li>
+									<li><a href="product.html">선물세트</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">느린마을<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="brand.html">느린마을 소개</a></li>
+									<li><a href="brand.html">느린마을 제품</a></li>
+									<li><a href="brand.html">Brewery &amp; Pub</a></li>
+									<li><a href="brand.html">판매점 및 지점</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">알림마당<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="brand.html">공지사항</a></li>
+									<li><a href="brand.html">배상면주가의 소식</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">참여마당<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">EVENT</a></li>
+									<li><a href="product.html">당첨차안내</a></li>
+									<li><a href="product.html">전통술 교육</a></li>
+									<li><a href="product.html">전통술 파티</a></li>
+								  </ul>
+								</li>
+								<li><a href="http://www.sansawon.co.kr">산사원 박물관</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><a href="product.html"><img style="margin: 0px;padding: 0px" src="images/intro1_1920_800.png" width="100%"></a></div>
+					<div class="swiper-slide"><a href="product.html"><img src="images/intro2_1920_800.png" width="100%"></a></div>
+					<div class="swiper-slide"><a href="product.html"><img src="images/intro_3.jpg" width="100%"></a></div>	
+				</div>
+			</div>
+			<script src="js/swiper.js"></script>
+			<script>
+			var swiper = new Swiper('.swiper-container', {
+			direction: 'vertical',
+			slidesPerView: 1,
+			pagination: {
+			  el: '.swiper-pagination',
+			  clickable: true,
+			},
+			spaceBetween: 30,
+			loop: true,
+		  effect: 'fade',
+		  centeredSlides: true,
+		  autoplay: {
+			delay: 2500,
+			  autoHeight: true,
+			disableOnInteraction: false,
+		  },
+		});
+			</script>
+
+			<div class="multiple-items7">
+				<div class="single-item"><a href="#"><img style="margin: 0px;padding: 0px" src="images/intro_1_600.png" width="100%"></a></div>
+				<div class="single-item"><a href="#"><img src="images/intro_2_600.png" width="100%"></a></div>
+				<div class="single-item"><a href="#"><img src="images/intro_3_600.png" width="100%"></a></div>
+			</div>	
+		</header>
+		<section class="business">
+			<div class="wrap">
+				<div class="business_con">
+					<div class="business_left wow slideInLeft">
+						<a href="#"><img src="images/brewery.png" width="100%" alt="brewery"></a>
+					</div>
+					<ul class="business_right wow slideInRight">
+						<li><a href="#"><img src="images/local.png" width="100%" alt="local"></a></li>
+						<li><a href="#"><img src="images/store.png" width="100%" alt="store"></a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="md_contets">
+	    	<div class="md_bg">
+				<div class="wrap">
+					<ul class="md_text">
+						<li class="organic" style="font-family: 'Bahagia',sans-serif,serif;">Organic Koeran<br>Rice Wine</li>
+						<li class="organic_1" style="line-height: 28px;">3년간 유기합성농약과 화학비료를 일체 사용하지 않고 재배한 유기농 쌀을 <br>인공감미료 없이 빚어 저온 살균한 담백하고 부드러운 고급 막걸리</li>
+						<li style="margin-top: 80px;"><a href="#"><img class="md_arrow" src="images/enter_arrow.png" width="25%" alt="arrow"></a></li>
+					</ul>
+					<div class="wow zoomIn">
+						<img class="md_img" src="images/md_img.png" width="40%" alt="ricewine">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="product">
+			<div class="wrap">
+				<p class="title">PRODUCT</p>
+				<p class="pro_title" style="font-size: 18px; margin-top: 15px;">오직 자연과 정성으로 만듭니다.</p>
+				<ul class="product_nav">
+					<li class="product_li_2" style="background-color: #b20000;color: white;">발효주</li>
+					<li class="product_li_3">증류주</li>
+					<li class="product_li_4">과실주</li>
+					<li class="product_li_5">선물세트</li>
+					<li class="product_li_1">전체</li>
+				</ul>
+				<div class="slider-container1">
+					<div class="multiple-items2">
+						<div class="single-items">
+							<ul class="product_con">
+								<li><img src="images/product%20(5).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product%20(6).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(6).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product%20(8).png" width="" alt="product"></li>	
+								<li>
+								<img src="images/product%20(1).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product%20(2).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product%20(3).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product%20(4).png" width="" alt="product"></li>
+							</ul>
+						</div>
+						<div class="single-items">
+							<ul class="product_con">
+								<li><img src="images/product2%20(1).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(2).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(3).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(4).png" width="" alt="product"></li>	
+								<li>
+								<img src="images/product2%20(5).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(7).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(8).png" width="" alt="product"></li>
+							</ul>
+						</div>
+					</div>
+					<div class="multiple-items3">
+						<div class="single-items">
+							<ul class="product_con">
+								<li><img src="images/product2%20(7).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(8).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(1).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(2).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(3).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(4).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(5).png" width="" alt="product"></li>
+							</ul>
+						</div>
+					</div>
+					<div class="multiple-items4">
+						<div class="single-items">
+							<ul class="product_con">
+								<li><img src="images/product%20(7).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(6).png" width="" alt="product"></li>
+							</ul>
+						</div>
+					</div>
+					<div class="multiple-items5">
+						<div class="single-items">
+							<ul class="product_con">
+								<li><img src="images/product4%20(1).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(2).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(3).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(4).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(5).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(6).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(7).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(8).png" width="" alt="product"></li>
+							</ul>
+						</div>
+					</div>
+					<div class="multiple-items1">
+						<div class="single-item">
+							<ul class="product_con">
+							<li><img src="images/product%20(1).png" width="" alt="product"></li>
+							<li>
+							<img src="images/product%20(2).png" width="" alt="product"></li>
+							<li>
+							<img src="images/product%20(3).png" width="" alt="product"></li>
+							<li>
+							<img src="images/product%20(4).png" width="" alt="product"></li>
+							<li>
+							<img src="images/product%20(5).png" width="" alt="product"></li>
+							<li>
+							<img src="images/product%20(6).png" width="" alt="product"></li>
+							<li>
+							<img src="images/product%20(7).png" width="" alt="product"></li>
+							<li>
+							<img src="images/product%20(8).png" width="" alt="product"></li>
+							</ul>
+						</div>
+						<div class="single-item">
+							<ul class="product_con">
+								<li><img src="images/product2%20(1).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(2).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(3).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(4).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(5).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(6).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(7).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product2%20(8).png" width="" alt="product"></li>
+							</ul>
+						</div>
+						<div class="single-item">
+							<ul class="product_con">
+								<li><img src="images/product3%20(1).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(2).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(3).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(4).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(5).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(6).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(7).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product3%20(8).png" width="" alt="product"></li>
+							</ul>
+						</div>
+						<div class="single-item">
+							<ul class="product_con">
+								<li><img src="images/product4%20(1).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(2).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(3).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(4).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(5).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(6).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(7).png" width="" alt="product"></li>
+								<li>
+								<img src="images/product4%20(8).png" width="" alt="product"></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-container1_2">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+						<img src="images/product%20(5).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(6).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(6).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(8).png" width="" alt="product"></div>	
+						<div class="swiper-slide">
+						<img src="images/product%20(1).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(2).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(3).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(4).png" width="" alt="product"></div>
+					
+						<div class="swiper-slide">
+						<img src="images/product2%20(1).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(2).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(3).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(4).png" width="" alt="product"></div>	
+						<div class="swiper-slide">
+						<img src="images/product2%20(5).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(7).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(8).png" width="" alt="product"></div>
+						<div class="swiper-slide"></div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-container1_3">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+						<img src="images/product2%20(7).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(8).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(1).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(2).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(3).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(4).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(5).png" width="" alt="product"></div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-container1_4">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+						<img src="images/product%20(7).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(6).png" width="" alt="product"></div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-container1_5">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">	
+						<img src="images/product4%20(1).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(2).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(3).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(4).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(5).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(6).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(7).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(8).png" width="" alt="product"></div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-container1_1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+						<img src="images/product%20(1).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(2).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(3).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(4).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(5).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(6).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(7).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product%20(8).png" width="" alt="product"></div>	
+						<div class="swiper-slide">
+						<img src="images/product2%20(1).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(2).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(3).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(4).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(5).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(6).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(7).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product2%20(8).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(1).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(2).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(3).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(4).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(5).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(6).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(7).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product3%20(8).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(1).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(2).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(3).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(4).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(5).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(6).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(7).png" width="" alt="product"></div>
+						<div class="swiper-slide">
+						<img src="images/product4%20(8).png" width="" alt="product"></div>
+					</div>
+				</div>
+				<script src="js/swiper.js"></script>
+				<script>
+				var swiper = new Swiper('.swiper-container1_1,.swiper-container1_2,.swiper-container1_3,.swiper-container1_4,.swiper-container1_5', {
+				slidesPerView: 1,
+				spaceBetween: 30,
+				loop: true,
+			  centeredSlides: true,
+			});
+				</script>
+			</div>
+		</section>
+		<section class="news">
+			<div class="wrap">
+				<p class="title_1">NEWS</p>
+				<a href="#"><img class="plus" src="images/plus.png" width="3%" alt="more"></a>
+				<a href="#">
+					<div class="news_left">
+						<img class="news_right_img" src="images/news1.png" width="" alt="store">
+						<p class="news_left_p1">배상면주가 느린마을 양조장푸드, 막걸리 패키지 리뉴얼</p>
+						<p class="news_left_p2">배상면주가의 느린마을양조장ㆍ푸드는 ‘매장에서 직접 빚어 신선한 
+							막걸리’ 콘셉트를 …<span class="news_po">2019-01-01</span></p>
+						<p class="news_left_p3"> 배상면주가의 느린마을양조장&amp;푸드는 ‘세상에서 가장 작은 양조장’을 콘셉트로 매장 내에 양조 시설을 
+						<br>설치해 오직 쌀, 누룩, 물만으로 빚은 프리미엄 수제 느린마을 막걸리를 맛볼 수 있는 매장이다. 현재 각 
+						<br>매장에서는 양조장에서 직접 빚는 느린마을 막걸리의 특징을 전달하기 위해 ‘직접 빚어 
+						…</p>
+					</div></a>
+				<ul class="news_right">
+                    <a href="#">
+						<li class="news_right-rwd">
+							<img class="news_right_img" src="images/news1.png" alt="store">
+							<p class="news_con">배상면주가 느린마을 양조장푸드,<br> 막걸리 패키지 리뉴얼<span class="news_po1">2019-01-01</span></p></li></a>
+					<a href="#">
+						<li>
+							<img src="images/news2.png" alt="mobile">
+							<p class="news_con">느린마을양조장의 다양한 메뉴를 즐길 수 있는 
+						<br>모바일 상품권 출시!<span class="news_po1">2018-12-21</span></p></li></a>
+					<li><a href="#">
+						<img src="images/news3.png" alt="strawberry"></a><p class="news_con">느린마을양조장,<span style="font-family: 'HANDotum',serif,sans-serif">女心</span>저격…과일 막걸리 
+					<br>라인업 확대<span class="news_po2">2018-12-20</span></p></li>
+				</ul>
+			</div>
+		</section>
+		<section class="sns">
+			<div class="wrap">
+				<a href="#"><img class="insta_logo" src="images/instagram_title.png" width="30%" alt="insta"></a>
+			</div>
+			<ul class="sns_con">
+				<li><div class="sns_wrap"><a href="https://www.instagram.com/slowbrewpub/"><img src="images/main_sns%20(2).png" width="100%" alt="insta"></a></div></li>
+				<li><div class="sns_wrap"><a href="https://www.instagram.com/slowbrewpub/"><img src="images/main_sns%20(3).png" width="100%" alt="insta"></a></div></li>
+				<li><div class="sns_wrap"><a href="https://www.instagram.com/slowbrewpub/"><img src="images/main_sns%20(1).png" width="100%" alt="insta"></a></div></li>
+				<li><div class="sns_wrap"><a href="https://www.instagram.com/slowbrewpub/"><img src="images/main_sns%20(4).png" width="100%" alt="insta"></a></div></li>
+				<li><div class="sns_wrap"><a href="https://www.instagram.com/slowbrewpub/"><img src="images/main_sns%20(5).png" width="100%" alt="insta"></a></div></li>
+				<li><div class="sns_wrap"><a href="https://www.instagram.com/slowbrewpub/"><img src="images/main_sns%20(6).png" width="100%" alt="insta"></a></div></li>
+				<li><div class="sns_wrap"><a href="https://www.instagram.com/slowbrewpub/"><img src="images/main_sns%20(7).png" width="100%" alt="insta"></a></div></li>
+				<li><div class="sns_wrap"><a href="https://www.instagram.com/slowbrewpub/"><img src="images/main_sns%20(8).png" width="100%" alt="insta"></a></div></li>
+				<li><div class="sns_wrap"><a href="https://www.instagram.com/slowbrewpub/"><img src="images/main_sns%20(9).png" width="100%" alt="insta"></a></div></li>
+				<li><div class="sns_wrap"><a href="https://www.instagram.com/slowbrewpub/"><img src="images/main_sns%20(10).png" width="100%" alt="insta"></a></div></li>
+			</ul>
+		</section>
+		<footer>
+			<div class="bottom_bg1">
+				<div class="wrap">
+					<ul class="sns_list">
+						<li><a href="#"><img src="images/sns_facebook_white.png" width="60%" alt="facebook"></a></li>
+						<li><a href="#"><img src="images/sns_twitter_white.png" width="60%" alt="twitter"></a></li>
+						<li><a href="#"><img src="images/sns_insta_white.png" width="60%" alt="insta"></a></li>
+						<li><a href="#"><img src="images/sns_blog_white.png" width="60%" alt="blog"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom_bg2">
+				<div class="wrap">
+					<ul class="bottom_text">
+						<li><img class="bottom_img1" src="images/bottom_logo.png" width="60%" alt="logo">
+						<img class="bottom_img2" src="images/bottom_logo320.png" width="60%" alt="logo">
+						</li>
+						<li>(주)배상면주가 서울특별시 서초구 강남대로 27길 7-9 우곡빌딩 6층<br> 
+						사업자 등록번호 127-81-34503 대표이사 배영호<br> 
+						대표전화 1544-8550 팩스 02-6917-8828 franchise@soolsool.co.kr<br>
+						Copyright(C) 2019,Ji-Eun.Choi All Rights Reserved. Designed by Ji-Eun. Choi</li>
+					</ul>
+				</div>
+			</div>
+			<div style="width:40px;opacity: 0.7;" class="totop_con"><a href="#top">
+				<img src="images/top_btn.png" width="100%" alt="top">
+				<p style="font-size: 0.7rem;text-align: center;font-weight:bold">TOP</p></a>
+			</div>
+		</footer>
+	</body>	
+</html>

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'netmarbleL';
+  src: url('netmarbleL.eot');
+  src: url('netmarbleL.woff2') format('woff2'),
+       url('netmarbleL.woff') format('woff'),
+       url('netmarbleL.ttf') format('truetype'),
+       url('netmarbleL.svg#netmarbleL') format('svg'),
+       url('netmarbleL.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

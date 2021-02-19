@@ -1,0 +1,555 @@
+<!Doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>Cartier</title>
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="ham_menu.css" type="text/css" rel="stylesheet">
+		<link rel="shortcut icon" href="favicon.ico">
+        <link href="product.css" rel="stylesheet" type="text/css">
+		<link href="reset.css" rel="stylesheet" type="text/css">
+		<link href="./js/slick.css" rel="stylesheet" type="text/css">
+		<link href="./js/slick-theme.css" rel="stylesheet" type="text/css">
+		<link href="./js/swiper.min.css" rel="stylesheet" type="text/css">
+		<link href="animate.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="./js/jquery-1.12.4.min.js">
+		</script>
+		<script type="text/javascript" src="./js/slick.js">		
+		</script>
+		<script type="text/javascript" src="./js/swiper.min.js">		
+		</script>
+		<script type="text/javascript" src="./js/wow.min.js">		
+		</script>
+		<script type="text/javascript">
+			new WOW().init();
+		</script>
+		<script type="text/javascript">
+			$(function() {
+			//슬라이드
+			$('.multiple-items').slick({
+				arrows: true,
+				prevArrow:'.prev1',
+				nextArrow:'.next1',
+				  dots: false,
+				  infinite: false,
+				  speed: 300,
+				  slidesToShow: 4,
+				  slidesToScroll: 1,
+				  responsive: [
+					{
+					  breakpoint: 1024,
+					  settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						infinite: true,
+					  }
+					},
+					{
+					  breakpoint: 600,
+					  settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						  infinite: true,
+					  }
+					},
+					{
+					  breakpoint: 400,
+					  settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						  infinite: true,
+					  }
+					}
+				  ]
+				});
+				});	
+			
+		$(document).ready(function(){
+			$(".menu li").mouseenter(function(){
+				$(this).children().stop().slideDown(200);
+				$(this).stop();	
+			})
+			$(".menu li").mouseleave(function(){
+				$(".brand_nav").stop().slideUp(200);
+			});
+			$(".brand_nav li").mouseenter(function(){
+				$(this).parent().stop();
+				$(this).stop();	
+				$(".menu li").stop();
+				$(".menu li ul").stop();
+				$(".menu").stop();
+			})
+			$(".brand_nav li").mouseleave(function(){
+				$(this).parent().stop();
+				$(this).stop();	
+				$(".menu li").stop();
+				$(".menu li ul").stop();
+				$(".menu").stop();
+			})
+
+		});
+			window.onload=function(){
+				var burger = $('.menu-trigger');
+
+				burger.each(function(index){
+					var $this = $(this);
+
+					$this.on('click', function(e){
+						e.preventDefault();
+						$(this).toggleClass('active-7');
+					})
+					});
+			};
+			$(document).ready(function(){
+                $(".more_con1").css("background-color","#000000");
+				$("#showimg2").css("display","none");
+				$("#showimg3").css("display","none");
+				  $('.menu-trigger').click(function(){
+					$('.slide-in-menu').toggleClass('active_1');
+				  });
+				$('.icon').click(function(){
+					$('.sub-level').toggleClass('active_1');
+				  });
+				  /* sub level menu display */
+
+				  $('.has-sub').click(function(){
+
+				   $(this).closest('.has-sub').find('.sub-level').slideToggle();   
+					var t = $(this).closest('.has-sub').find('.sub-level'); 
+					$('.sub-level').not(t).slideUp();
+				   });
+
+				});
+			
+            $(function(){
+				$("#imgbtn1").click(function(){
+					$("#showimg1").show();
+					$("#showimg2").hide();
+					$("#showimg3").hide();
+                    $(".more_con1").css("background-color","#000000");
+                    $(".more_con2").css("background-color","#fff");
+                    $(".more_con3").css("background-color","#fff");
+				});
+				$("#imgbtn2").click(function(){
+					$("#showimg2").show();
+					$("#showimg1").hide();
+					$("#showimg3").hide();
+                    $(".more_con2").css("background-color","#000000");
+                     $(".more_con1").css("background-color","#fff");
+                    $(".more_con3").css("background-color","#fff");
+				});
+				$("#imgbtn3").click(function(){
+					$("#showimg3").show();
+					$("#showimg2").hide();
+					$("#showimg1").hide();
+                    $(".more_con3").css("background-color","#000000");
+                     $(".more_con2").css("background-color","#fff");
+                    $(".more_con1").css("background-color","#fff");
+				});
+				})
+     </script>
+    </head>
+    <body style="overflow-x:hidden; overflow-y:auto;">
+		<header>
+			<div class="intro_bg">
+				<div class="wrap">
+					<div class="top_nav1">
+						<div class="top_nav1_left"><a class="menu-trigger type7" href="#">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a></div>
+						<div class="top_nav1_right">
+							<img class="search" src="images/search.png" alt="search">
+							<img class="like" src="images/like.png" alt="like">
+							<p class="login">LOG-IN</p>
+						</div>
+					</div>
+					<a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+					<div class="top_menu_nav">
+						<ul class="menu">
+							<li><a href="#">BRAND</a>
+								<ul class="brand_nav brand">
+								<a href="product.html"><li>살아있는 유산</li></a>
+									<a href="product.html"><li>노하우</li></a>
+									<a href="product.html"><li>까르띠에의 약속</li></a>
+									<a href="product.html"><li>CARTIER CONNECTED</li></a>
+								</ul>
+							</li>
+							<li><a href="#">JEWELRY</a>
+								<ul class="brand_nav">
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav_ring_03.png"><p>RING</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav_bra.png"><p>BLACELET</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav_neck.png"><p>NECKLESS</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav_ear.png"><p>EARRING</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav_bro.png"><p>BROACH</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav_man.png"><p>MAN</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box box2"><p>SPEACIAL</p>
+										</div></a></li>
+									<li><a href="product.html"><div class="nav_box box2"><p>ALL</p>
+										</div></a></li>
+								</ul>
+							</li>
+							<li><a href="#">WATCH</a>
+								<ul class="brand_nav">
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav%20(5).png"><p>MAN</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav%20(6).png"><p>WOMAN</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box box2"><p>SPEACIAL</p>
+										</div></a></li>
+									<li><a href="product.html"><div class="nav_box box2"><p>ALL</p>
+										</div></a></li>
+								</ul>
+							</li>
+							<li><a href="#">WEDDING</a>
+								<ul class="brand_nav">
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav%20(3).png"><p>DIAMOND</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav%20(4).png"><p>WEDDING RING</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box box2"><p>SPEACIAL</p>
+										</div></a></li>
+									<li><a href="product.html"><div class="nav_box box2"><p>ALL</p>
+										</div></a></li>
+								</ul>
+							</li>
+							<li><a href="#">ACCESSORY</a>
+								<ul class="brand_nav">
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav%20(1).png"><p>BAGS</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav%20(7).png"><p>PERFUME</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav%20(2).png"><p>SUNGLASSES</p></div></a></li>
+									<li><a href="product.html"><div class="nav_box">
+										<img src="images/nav%20(8).png"><p>ETC</p></div></a></li>
+								</ul>
+							</li>
+							<li><a href="#">COSTOM</a>
+								<ul class="brand_nav brand">
+									<a href="product.html"><li>나만의 시계</li></a>
+									<a href="product.html"><li>스트랩 컨피규레이터</li></a>
+									<a href="product.html"><li>나만의 아뮬레뜨</li></a>
+								</ul>
+							</li>
+							<li><a href="#">SERVICE</a>
+								<ul class="brand_nav brand">
+									<a href="product.html"><li>부티끄 찾기</li></a>
+									<a href="product.html"><li>A / S</li></a>
+									<a href="product.html"><li>이벤트</li></a>
+									<a href="product.html"><li>GIFT</li></a>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="slide-in-menu">
+							<ul class="first-level">
+								<li class="has-sub"><a href="#">BRAND<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">살아있는 유산</a></li>
+									<li><a href="product.html">노하우</a></li>
+									<li><a href="product.html">까르띠에의 약속</a></li>
+									<li><a href="product.html">CARTIER CONNECTED</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">JEWELRY<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">RING</a></li>
+									<li><a href="product.html">BLACELET</a></li>
+									<li><a href="product.html">NECKLESS</a></li>
+									<li><a href="product.html">EARRING</a></li>
+									<li><a href="product.html">BROACH</a></li><li><a href="product.html">MAN</a></li><li><a href="product.html">SPEACIAL</a></li><li><a href="product.html">ALL</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">WATCH<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">MAN</a></li>
+									<li><a href="product.html">WOMAN</a></li>
+									<li><a href="product.html">SPEACIAL</a></li>
+									<li><a href="product.html">ALL</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">WEDDING<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">DIAMOND</a></li>
+									<li><a href="product.html">WEDDING RING</a></li><li><a href="product.html">SPEACIAL</a></li><li><a href="product.html">ALL</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">ACCESSORY<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">BAGS</a></li>
+									<li><a href="product.html">PERFUME</a></li>
+									<li><a href="product.html">SUNGLASSES</a></li>
+									<li><a href="product.html">ETC</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">CUSTOM<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">나만의 시계</a></li>
+									<li><a href="product.html">스트랩 컨피규레이터</a></li>
+									<li><a href="product.html">나만의 아뮬레뜨</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">SERVICE<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">부티끄 찾기</a></li>
+									<li><a href="product.html">A / S</a></li>
+									<li><a href="product.html">이벤트</a></li>
+									<li><a href="product.html">GIFT</a></li>
+								  </ul>
+								</li>
+								
+							</ul>
+						</div>
+				</div>
+			</div>
+		</header>
+		<section class="product_detail">
+			<div class="wrap">
+				<div class="product_left">
+					<ul class="product_img">
+						<li class="view_con">
+							<img id="showimg1" src="images/p_main.png" width="155%" alt="diamond_ring">
+							<img id="showimg2" src="images/p_more%20(2).png" width="80%" alt="diamond_ring">
+							<img id="showimg3" src="images/p_more%20(3).png" width="100%" alt="diamond_ring"></li>
+						<li>
+							<ul class="more_view">
+								<li class="more_con1"><img id="imgbtn1" src="images/p_main.png" width="" alt="diamond_ring"></li>
+								<li class="more_con2"><img id="imgbtn2"src="images/p_more%20(2).png" width="" alt="diamond_ring"></li>
+								<li class="more_con3"><img id="imgbtn3"src="images/p_more%20(3).png" width="" alt="diamond_ring"></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="p_icon">
+								<li><img src="images/p_icon%20(1).png" width="80%" alt="like"></li>
+								<li><img src="images/p_icon%20(2).png" width="80%" alt="share"></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="product_right">
+					<p class="p_dt_title">
+						1895 SOLITAIRE RING
+					</p>
+					<p class="p_dt_t1">
+						제품 번호&#58;N4164600
+					</p>
+					<p class="p_dt_t2">
+							&#8361; 가격 문의
+					</p>
+					<p class="p_dt_line">
+					</p>
+					<p class="p_dt_t3">
+						KEY SPECIFICATIONS
+					</p>
+					<div class="spec">
+						<ul class="spec_title1">
+							<li>Material</li>
+							<li>Size</li>
+							<li>Stone</li>
+						</ul>
+						<ul class="spec_title2">
+							<li>플레티늄</li>
+							<li>47 ~ 55</li>
+							<li>다이아몬드 2.00~4.99캐럿</li>
+						</ul>
+					</div>
+					<div class="spec2">
+						<ul class="spec2_left spec2_t">
+							<li>ITEM</li>
+							<li>RING</li>
+						</ul>
+						<ul class="spec2_right spec2_t">
+							<li>COLLECTION</li>
+							<li>1895 SOLITAIRE</li>
+						</ul>
+					</div>
+					<ul class="btn">
+						<li>문의하기</li>
+						<li>방문예약</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="recommand">
+			<div class="wrap">
+				<p class="rec_title">RECOMMAND</p>
+				<div class="slider-container">
+					<div class="multiple-items">
+						<div class="single-items">
+							<a href="product.html"><img src="images/rec%20(1).png" width="100%" alt="celeb"></a>
+						</div>
+						<div class="single-items">
+							<a href="product.html"><img src="images/rec%20(2).png" width="100%" alt="celeb"></a>
+						</div>
+						<div class="single-items">
+							<a href="product.html"><img src="images/rec%20(3).png" width="100%" alt="celeb"></a>
+						</div>
+						<div class="single-items">
+							<a href="product.html"><img src="images/rec%20(4).png" width="100%" alt="celeb"></a>
+						</div><div class="single-items">
+						<a href="product.html"><img src="images/rec%20(1).png" width="100%" alt="celeb"></a>
+						</div>
+						<div class="single-items">
+							<a href="product.html"><img src="images/rec%20(2).png" width="100%" alt="celeb"></a>
+						</div>
+						<div class="single-items">
+							<a href="product.html"><img src="images/rec%20(3).png" width="100%" alt="celeb"></a>
+						</div>
+						<div class="single-items">
+							<a href="product.html"><img src="images/rec%20(4).png" width="100%" alt="celeb"></a>
+						</div>
+						
+					</div>
+				<div class="next1"><img src="images/arrow_right.png" width="60%"></div>
+				<div class="prev1"><img src="images/arrow_left.png" width="60%"></div>
+				</div>
+			</div>
+			
+		</section>
+		<section class="diamond">
+			<div class="diamond_bg">
+				<div class="wrap">
+					<div class="diamond_bg_con">
+						<div class="diamond_bg_text">
+							<span>Cartier's</span> DIAMOND
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dia_explain">
+				 <div class="wrap">
+					 <div class="dia_con">
+						 <ul class="dia_list">
+						 	<li class="list_or1"><img src="images/p_dia_dt%20(1).png" width="" alt="diamond"></li>
+							 <li class="list_or2 ex_bg"><div class="dia_ex">
+								 	<p class="d_line"></p>
+								 <p class="d_title">CUT</p>
+								 <p class="d_title2">눈부신 광채에 대한 약속</p>
+								 <p class="d_con">4C 가운데 다이아몬드의 광채를 결정짓는 가장 중요한 요소는
+								 다이아몬드 컷과 컷의 대칭 그리고 너무 높아도 안 되고 
+								너무 납작해도 안 되는 이상적인 컷의 균형입니다. 
+								 0.30캐럿 이상의 까르띠에 브릴리언트 컷 센터 다이아몬드는 
+								컷의 GIA 등급에서 "매우 좋음" 또는 "탁월함"으로 분류되어, 
+								눈부신 반짝임과 놀라운 광채를 선사합니다.</p>
+								 </div></li>
+							<li class="list_or3 ex_bg"><div class="dia_ex">
+								 	<p class="d_line"></p>
+								 <p class="d_title">CARAT</p>
+								 <p class="d_title2">중량에 대한 약속</p>
+								 <p class="d_con">과거 다이아몬드의 중량을 재는데 사용되었던 캐롭 씨앗의 이름에서 
+									유래된 캐럿은 현재 다이아몬드 중량의 측정 단위로 사용되고 있습니다. 
+									다이아몬드의 중량은 다이아몬드 가격을 결정하는
+									가장 중요한 기준이며, 1캐럿은 0.20g에 해당합니다.
+									까르띠에는 세팅 기법에 따라 다양한 캐럿의 솔리테어 
+									다이아몬드를 선보입니다.</p>
+								 </div></li>
+							  <li class="list_or4"><img src="images/p_dia_dt%20(2).png" width="" alt="diamond"></li>
+							 <li class="list_or5"><img src="images/p_dia_dt%20(3).png" width="" alt="diamond"></li>
+							 <li class="list_or6 ex_bg"><div class="dia_ex">
+								 	<p class="d_line"></p>
+								 <p class="d_title">CLARITY</p>
+								 <p class="d_title2">완벽한 순도에 대한 약속</p>
+								 <p class="d_con">내포물은 다이아몬드에 천연적으로 존재하는 불순물로 
+								다이아몬드의 품질에 영향을 미칠 수 있는 요인입니다. 
+								다이아몬드의 투명도는 내포물의 양, 크기, 위치에 의해 좌우됩니다.
+								GIA가 결정한 투명도 등급은 FL부터 I3까지 입니다.
+								까르띠에 다이아몬드는 IF에서 VS2까지의 등급에서만 선별되어, 
+								뛰어난 투명도를 보장하고 내포물이 육안으로 거의 보이지 않습니다.</p>
+								 </div></li>
+							 <li class="list_or7 ex_bg"><div class="dia_ex">
+								 	<p class="d_line"></p>
+								 <p class="d_title">COLOR</p>
+								 <p class="d_title2">투명도에 대한 약속</p>
+								 <p class="d_con">다이아몬드는 화이트 컬러일 수록 더욱 귀한 것으로 여겨집니다. 
+								다이아몬드의 컬러는 GIA가 정한 단계에 따라 알파벳 순으로 
+								D에서 Z까지로 판정됩니다. 
+								까르띠에 다이아몬드는 D와 H 사이 무색인 다이아몬드만을 선별합니다. 
+								또한, 까르띠에는 다이아몬드에 형광의 정도가 
+								전혀 없거나 아주 약한 형광을 띄는 것만을 선택합니다.</p>
+								 </div></li>
+							  <li class="list_or8"><img src="images/p_dia_dt%20(4).png" width="" alt="diamond"></li>
+						 </ul>
+					 </div>
+				 </div>
+			</div>
+		</section>
+		<section class="service">
+			<div class="wrap">
+				<div class="service_con">
+					<ul class="service_list">
+						<li>
+							<div class="service_c">
+								<img src="images/service1.jpg" width="450px" alt="sizeguide">
+							</div>
+						</li>
+						<li class="service_title">사이즈가이드</li>
+					</ul>
+					<ul class="service_list">
+						<li>
+						<div class="service_c">
+							<img src="images/service3.jpg" width="520px" alt="ingarving">
+						</div>
+						</li>
+						<li class="service_title">인그레이빙</li>
+					</ul>
+					<ul class="service_list">
+						<li>
+							<div class="service_c">
+								<img src="images/service2.jpg" width="480px" alt="gift">
+							</div>
+						</li>
+						<li class="service_title">선물포장</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="wrap">
+				<ul class="bottom_text">
+					<li><p class="bottom_title">Costom Service</p>
+						<a href="#"><p>이용약관</p></a>
+						<a href="#"><p>사이트맵</p></a>
+						<a href="#"><p>채용정보</p></a>
+						<a href="#"><p>크레딧</p></a>
+						<a href="#"><p>개인정보처리방침</p></a></li>
+					<li><p class="bottom_title">Contact Us</p>
+						<p class="number">+82 1566 7277</p></li>
+					<li><p class="bottom_title">SNS</p>
+						<div class="sns_logo">
+							<a href="#"><img src="images/sns%20(1).png" width="" alt="facebook"></a>
+							<a href="#"><img src="images/sns%20(2).png" width="" alt="pinterest"></a>
+							<a href="#"><img src="images/sns%20(3).png" width="" alt="instagram"></a>
+							<a href="#"><img src="images/sns%20(4).png" width="" alt="tweitter"></a>
+							<a href="#"><img src="images/sns%20(5).png" width="" alt="youtube"></a>
+							<a href="#"><img src="images/sns%20(6).png" width="" alt="tumbler"></a>
+                        </div>
+                    </li>
+				</ul>
+			</div>
+			<p class="bottom_line"></p>
+			<div class="wrap">
+				<div class="bottom_text2">
+					<div class="bottom_text2_left">
+						<p>사업자등록번호: No. CH-66-0169981-7<br>
+							A: Boulevard James-Fazy 8, 1201 Geneva, Switzerland<br>
+							T:+82 1566 7277<br>
+							E:relation.clientele@cartier.com<br>
+							copyrigth 2019. Ji-Eun Choi. ALL RIGHT RESERVED.</p>
+					</div>
+					<div class="bottom_text2_right">
+						<a href="#"><img src="images/relate%20(1).png" width="" alt="related"></a>
+						<a href="#"><img src="images/relate%20(2).png" width="" alt="related"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+    </body>  
+</html>
