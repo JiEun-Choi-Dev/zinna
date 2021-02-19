@@ -1,358 +1,678 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<title>디자인을 읽는 퍼블리셔! 최지은 포트폴리오</title>
-		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="favicon.ico">
-        <link href="web.css" rel="stylesheet" type="text/css">
-		<link href="reset.css" rel="stylesheet" type="text/css">
-		<link href="./js/slick.css" rel="stylesheet" type="text/css">
-		<link href="./js/slick-theme.css" rel="stylesheet" type="text/css">
-		<link href="./js/swiper.min.css" rel="stylesheet" type="text/css">
-		<link href="./js/swiper.css" rel="stylesheet" type="text/css">
-		<link href="animate.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="./js/jquery-1.12.4.min.js">
-		</script>
-		<script type="text/javascript" src="./js/slick.js">		
-		</script>
-		<script type="text/javascript" src="./js/swiper.min.js">		
-		</script>
-		<script type="text/javascript" src="./js/wow.min.js">		
-		</script>
-		<script type="text/javascript">
-			new WOW().init();
-		</script>
-		<script type="text/javascript">
-		$(document).ready(function(){
-			//top버튼
-			if($(this).scrollTop()==0){
-					$(".totop_con").hide();
-				}
-			$(document).scroll(function(){
-				if($(this).scrollTop()>0){
-					$(".totop_con").show();
-				}
-				else{$(".totop_con").hide();
-				}
-			})
-			$(".totop_con").click(function(){
-				$("html,body").animate({
-					scrollTop:0
-				},150)
-			});
-		});
-			//menu
-		$(function(){
-			   window.onload = function () {
-				   var burger = $('.menu-trigger');
+  <head>
+    <meta charset="utf-8" />
+    <title>디자인을 읽는 프론트엔드 개발자! 최지은 포트폴리오</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="web.css" rel="stylesheet" type="text/css" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="./js/slick.css" rel="stylesheet" type="text/css" />
+    <link href="./js/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="./js/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="./js/swiper.css" rel="stylesheet" type="text/css" />
+    <link href="animate.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/slick.js"></script>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+    <script type="text/javascript" src="./js/wow.min.js"></script>
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //top버튼
+        if ($(this).scrollTop() == 0) {
+          $(".totop_con").hide();
+        }
+        $(document).scroll(function () {
+          if ($(this).scrollTop() > 0) {
+            $(".totop_con").show();
+          } else {
+            $(".totop_con").hide();
+          }
+        });
+        $(".totop_con").click(function () {
+          $("html,body").animate(
+            {
+              scrollTop: 0,
+            },
+            150
+          );
+        });
+      });
+      //menu
+      $(function () {
+        window.onload = function () {
+          var burger = $(".menu-trigger");
 
-							burger.each(function(index){
-								var $this = $(this);
+          burger.each(function (index) {
+            var $this = $(this);
 
-								$this.on('click', function(e){
-									e.preventDefault();
-									$(this).toggleClass('active-' + (index+1));
-								})
-								});
-						   $(".top_con").each(function () {
-							// 개별적으로 Wheel 이벤트 적용
-							$(this).on("mousewheel DOMMouseScroll", function (e) {
-								e.preventDefault();
-								var delta = 0;
-								if (!event) event = window.event;
-								if (event.wheelDelta) {
-									delta = event.wheelDelta / 120;
-									if (window.opera) delta = -delta;
-								} else if (event.detail) delta = -event.detail / 3;
-								var moveTop = null;
-								// 마우스휠을 위에서 아래로
-								if (delta < 0) {
-									if ($(this).next() != undefined) {
-										moveTop = $(this).next().offset().top;
-									}
-								// 마우스휠을 아래에서 위로
-								} else {
-									if ($(this).prev() != undefined) {
-										moveTop = $(this).prev().offset().top;
-									}
-								}
-								// 화면 이동 0.8초(800)
-								$("html,body").stop().animate({
-									scrollTop: moveTop + 'px'
-								}, {
-									duration: 800, complete: function () {
-									}
-								});
-							});
-						});
-					};
-			 }); 
-			
-			function functhisSize(){
-				var size= window.innerWidth;
-			console.log(size);
-			$("#leftmenuArea").css("width",size+"px");
-			}
-			$(function(){
-				$(window).resize(functhisSize);
-				functhisSize();
-			});
-		$(document).ready(function(){
-			$("#leftmenuArea").hide();
-				
-			$(".menu-trigger").click(function(){
-				$("#leftmenuArea").animate({width:'toggle'});
-			})
-		
-		});
-		</script>
-    </head>
-    <body style="overflow-x:hidden; overflow-y:auto;">
-		<div class="top_con">
-			<div class="top_nav">
-				<a href="index.html"><img src="image/logo_color.png" width="" alt="logo"></a>
-				<div class="menu-trigger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<div id="leftmenuArea">
-					<ul class="menu_nav">
-						<li><a href="web.html">WEB</a></li>
-						<li><a href="app.html">
-							APP</a></li>
-						<li><a href="introduce.html">
-							WHO AM I ?</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<a href="product.html">
-							<div class="slide1">
-								<div class="intro_detail">
-									<div class="intro_text1">
-										<p class="intro_title">Cartier</p>
-										<p class="intro_title1">WEB REDESIGN</p>
-									</div>
-									<div class="intro_card">
-										<div class="card_con"><p>DESIGN</p></div>
-											<p>X</p>
-											<div class="card_con"><p>CODING</p></div>
-											<p>X</p>
-											<div class="card_con">
-											<p>RWD</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="swiper-slide">
-						<a href="product.html">
-							<div class="slide2">
-								<div class="intro_detail">
-									<div class="intro_text1">
-										<p class="intro_title">유기견보호센터</p>
-										<p class="intro_title1">WEB REDESIGN</p>
-									</div>
-									<div class="intro_card">
-										<div class="card_con"><p>DESIGN</p></div>
-										<p>X</p>
-										<div class="card_con"><p>CODING</p></div>
-									</div>
-								</div>
-							</div>
-						</a>
-					
-					</div>
-					<div class="swiper-slide">
-						<a href="product.html">
-							<div class="slide3">
-								<div class="intro_detail">
-									<div class="intro_text1">
-										<p class="intro_title">배상면주가</p>
-										<p class="intro_title1">WEB REDESIGN</p>
-									</div>
-									<div class="intro_card">
-										<div class="card_con"><p>DESIGN</p></div>
-										<p>X</p>
-										<div class="card_con"><p>CODING</p></div>
-										<p>X</p>
-										<div class="card_con">
-										<p>RWD</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="swiper-slide">
-						<a href="product.html">
-							<div class="slide4">
-								<div class="intro_detail">
-									<div class="intro_text1">
-										<p class="intro_title">Aveeno</p>
-										<p class="intro_title1">WEB REDESIGN</p>
-									</div>
-									<div class="intro_card">
-										<div class="card_con"><p>DESIGN</p></div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					  <div class="swiper-pagination"></div>
-					</div>
-				</div>	
-			<script src="js/swiper.js"></script>
-			<script>
-					var swiper = new Swiper('.swiper-container', {
-					slidesPerView: 1,
-					pagination: {
-					  el: '.swiper-pagination',
-					  clickable: true,
-					},
-					spaceBetween: 30,
-					loop: true,
-				  effect: 'fade',
-				  centeredSlides: true,
-				  autoplay: {
-					delay: 2000,
-					  autoHeight: true,
-					disableOnInteraction: false,
-				  },
-				});
-			</script>
-			
-		</div>
-		<section class="work_web">
-			<div class="work">
-				<div class="work_con">
-					<div class="work_detail">
-						<div class="work_text">
-							<p class="work_title">Cartier</p>
-							<p class="work_title2">Renewal Design</p>
-							<p>Design 100% / Publishing 100%</p>
-							<ul class="detail_con">
-								<li><p class="work_bold">INTRO</p>
-								<p>고급 주얼리 &amp; 시계 브랜드</p></li>
-								<li><p class="work_bold">TYPE</p>
-								<p>Responsive (PC / Tablet / Moblile)</p></li>
-								<li><p class="work_bold">PAGE</p>
-								<p>메인 / 상세</p></li>	
-								<li><p class="work_bold">SKILLS</p>
-								<p>Photoshop CS6 / Illustrator CS6<br> PowerPoint2010</li>
-							</ul>
-							<div class="view">
-								<a href="cartier.html" target="_blank"><p>VIEW</p></a>
-							</div>
-						</div>
-						<img class="work_moc"src="image/web_work%20(1).png" width="" alt="web">
-					</div>
-				</div>
-			</div>
-			<div class="work">
-				<div class="work_con2">
-					<div class="work_detail">
-						<div class="work_text">
-							<p class="work_title">유기견보호센터</p>
-							<p class="work_title2">Renewal Design</p>
-							<p>Design 100% / Publishing 100%</p>
-							<ul class="detail_con">
-								<li><p class="work_bold">INTRO</p>
-								<p>유기동물 공유 및 입양 사이트</p></li>
-								<li><p class="work_bold">TYPE</p>
-								<p>PC</p></li>
-								<li><p class="work_bold">PAGE</p>
-								<p>메인 / 회원가입</p></li>	
-								<li><p class="work_bold">SKILLS</p>
-								<p>Photoshop CS6 / Illustrator CS6 /<br>Html5,Css3</p></li>
-							</ul>
-							<div class="view2">
-								<a href="rescue_dog/rescue_dog_protection_center.html" target="_blank"><p>VIEW</p></a>
-							</div>
-						</div>
-						<img class="work_moc"src="image/web_work%20(2).png" width="" alt="web">
-					</div>
-				</div>
-			</div>
-			<div class="work">
-				<div class="work_con3">
-					<div class="work_detail">
-						<div class="work_text">
-							<p class="work_title">배상면주가</p>
-							<p class="work_title2">Renewal Design</p>
-							<p>Design 100% / Publishing 100%</p>
-							<ul class="detail_con">
-								<li><p class="work_bold">INTRO</p>
-								<p>막걸리, 소주 등의 전통주 브랜드</p></li>
-								<li><p class="work_bold">TYPE</p>
-								<p>Responsive (PC / Tablet / Moblile)</p></li>
-								<li><p class="work_bold">PAGE</p>
-								<p>메인 / 상세 / 브랜드스토리</p></li>	
-								<li><p class="work_bold">SKILLS</p>
-								<p>Photoshop CS6 / Illustrator CS6 / PowerPoint2010 <br>Html5,Css3,Jquery</p></li>
-							</ul>
-							<div class="view">
-								<a href="brewery/index.html" target="_blank"><p>VIEW</p></a>
-							</div>
-						</div>
-						<img class="work_moc"src="image/web_work%20(3).png" width="" alt="web">
-					</div>
-				</div>
-			</div>
-			<div class="work">
-				<div class="work_con4">
-					<div class="work_detail">
-						<div class="work_text">
-							<p class="work_title">Aveeno</p>
-							<p class="work_title2">Renewal Design</p>
-							<p>Design 100%</p>
-							<ul class="detail_con">
-								<li><p class="work_bold">INTRO</p>
-								<p>전연령층 FACE &amp; BODY 화장품 브랜드</p></li>
-								<li><p class="work_bold">TYPE</p>
-								<p>PC</p></li>
-								<li><p class="work_bold">PAGE</p>
-								<p>메인</p></li>	
-								<li><p class="work_bold">SKILLS</p>
-								<p>Photoshop CS6 / Illustrator CS6</p></li>
-							</ul>
-							<div class="view">
-								<a href="aveeno.html" target="_blank"><p>VIEW</p></a>
-							</div>
-						</div>
-						<img class="work_moc"src="image/web_work%20(4).png" width="" alt="web">
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="related">
-			<div class="related_bg">
-				<div class="related_con">
-					<p style="color:#f2a96c;font-size:2rem;font-weight: bold;">Related Work</p>
-					<a href="app.html"><div class="related_wrap">
-					<div class="related_img_con">
-						<img src="image/relate%20(1).png" width="25%;" alt="app"><div class="related_hover"><p class="hover_text">APP</p></div></div></div></a>
-					<a href="introduce.html"><div class="related_wrap">
-					<div class="related_img_con">
-						<img src="image/relate%20(2).png" width="25%" alt="introduce"><div class="related_hover"><p class="hover_text">Who Am I ?</p></div></div></div></a>
-				</div>
-			</div>
-		</section>
-		<footer>
-			<div class="bottom_text">
-				<p>UI / UX Designer &amp; Publisher. JIEUN CHOI</p>
-				<p>moto0807@naver.com</p>
-				<p>010 . 4328 . 4577</p>
-				<p>Copyright 2019.Ji-eun Choi.All right reserved</p>
-			</div>
-			<div style="opacity: 0.8;" class="totop_con"><a href="#top">
-				<p style="font-size: 0.9rem;text-align: center;font-weight:bold">TOP</p></a>
-			</div>
-		</footer>
-    </body>  
+            $this.on("click", function (e) {
+              e.preventDefault();
+              $(this).toggleClass("active-" + (index + 1));
+            });
+          });
+          $(".top_con").each(function () {
+            // 개별적으로 Wheel 이벤트 적용
+            $(this).on("mousewheel DOMMouseScroll", function (e) {
+              e.preventDefault();
+              var delta = 0;
+              if (!event) event = window.event;
+              if (event.wheelDelta) {
+                delta = event.wheelDelta / 120;
+                if (window.opera) delta = -delta;
+              } else if (event.detail) delta = -event.detail / 3;
+              var moveTop = null;
+              // 마우스휠을 위에서 아래로
+              if (delta < 0) {
+                if ($(this).next() != undefined) {
+                  moveTop = $(this).next().offset().top;
+                }
+                // 마우스휠을 아래에서 위로
+              } else {
+                if ($(this).prev() != undefined) {
+                  moveTop = $(this).prev().offset().top;
+                }
+              }
+              // 화면 이동 0.8초(800)
+              $("html,body")
+                .stop()
+                .animate(
+                  {
+                    scrollTop: moveTop + "px",
+                  },
+                  {
+                    duration: 800,
+                    complete: function () {},
+                  }
+                );
+            });
+          });
+        };
+      });
+
+      function functhisSize() {
+        var size = window.innerWidth;
+        console.log(size);
+        $("#leftmenuArea").css("width", size + "px");
+      }
+      $(function () {
+        $(window).resize(functhisSize);
+        functhisSize();
+      });
+      $(document).ready(function () {
+        $("#leftmenuArea").hide();
+
+        $(".menu-trigger").click(function () {
+          $("#leftmenuArea").animate({ width: "toggle" });
+        });
+      });
+    </script>
+  </head>
+  <body style="overflow-x: hidden; overflow-y: auto;">
+    <div class="top_con">
+      <div class="top_nav">
+        <a href="index.html"
+          ><img src="image/logo_color.png" width="" alt="logo"
+        /></a>
+        <div class="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div id="leftmenuArea">
+          <ul class="menu_nav">
+            <li><a href="web.html">WEB</a></li>
+            <li><a href="app.html"> APP</a></li>
+            <li><a href="introduce.html"> WHO AM I ?</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="product.html">
+              <div class="slide1">
+                <div class="intro_detail">
+                  <div class="intro_text1">
+                    <p class="intro_title">Cartier</p>
+                    <p class="intro_title1">WEB REDESIGN</p>
+                  </div>
+                  <div class="intro_card">
+                    <div class="card_con"><p>DESIGN</p></div>
+                    <p>X</p>
+                    <div class="card_con"><p>CODING</p></div>
+                    <p>X</p>
+                    <div class="card_con">
+                      <p>RWD</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <div class="slide2">
+                <div class="intro_detail">
+                  <div class="intro_text1">
+                    <p class="intro_title">유기견보호센터</p>
+                    <p class="intro_title1">WEB REDESIGN</p>
+                  </div>
+                  <div class="intro_card">
+                    <div class="card_con"><p>DESIGN</p></div>
+                    <p>X</p>
+                    <div class="card_con"><p>CODING</p></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <div class="slide3">
+                <div class="intro_detail">
+                  <div class="intro_text1">
+                    <p class="intro_title">배상면주가</p>
+                    <p class="intro_title1">WEB REDESIGN</p>
+                  </div>
+                  <div class="intro_card">
+                    <div class="card_con"><p>DESIGN</p></div>
+                    <p>X</p>
+                    <div class="card_con"><p>CODING</p></div>
+                    <p>X</p>
+                    <div class="card_con">
+                      <p>RWD</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="product.html">
+              <div class="slide4">
+                <div class="intro_detail">
+                  <div class="intro_text1">
+                    <p class="intro_title">Aveeno</p>
+                    <p class="intro_title1">WEB REDESIGN</p>
+                  </div>
+                  <div class="intro_card">
+                    <div class="card_con"><p>DESIGN</p></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <script src="js/swiper.js"></script>
+      <script>
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          spaceBetween: 30,
+          loop: true,
+          effect: "fade",
+          centeredSlides: true,
+          autoplay: {
+            delay: 2000,
+            autoHeight: true,
+            disableOnInteraction: false,
+          },
+        });
+      </script>
+    </div>
+    <section class="work_web">
+      <div class="work">
+        <div class="work_con8">
+          <div class="work_detail">
+            <div class="work_text">
+              <p class="work_title">G-MONEY-MAP</p>
+              <p class="work_title2">Project (in Progress)</p>
+              <p>Planning / Design / Publishing / Development</p>
+              <ul class="detail_con">
+                <li>
+                  <p class="work_bold">INTRO</p>
+                  <p>경기도화폐 가맹점 맵 플랫폼</p>
+                </li>
+                <li>
+                  <p class="work_bold">TYPE</p>
+                  <p>Responsive (PC / Tablet / Moblile)</p>
+                </li>
+                <li>
+                  <p class="work_bold">PAGE</p>
+                  <p>메인 / 상세</p>
+                </li>
+                <li>
+                  <p class="work_bold">SKILLS</p>
+                  <p>
+                    React/ TypeScript/ Next / javascript
+                  </p>
+                </li>
+              </ul>
+              <div class="view">
+                <a href="https://g-money-map.now.sh/" target="_blank"
+                  ><p>VIEW</p></a
+                >
+              </div>
+            </div>
+            <img
+              class="work_moc"
+              src="image/web_work%20(8).png"
+              width=""
+              alt="web"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work_con9">
+          <div class="work_detail">
+            <div class="work_text">
+              <p class="work_title">BLOG</p>
+              <p class="work_title2">Project (in Progress)</p>
+              <p>Planning / Design / Publishing / Development</p>
+              <ul class="detail_con">
+                <li>
+                  <p class="work_bold">INTRO</p>
+                  <p>React로 개발하는 블로그</p>
+                </li>
+                <li>
+                  <p class="work_bold">TYPE</p>
+                  <p>Responsive (PC / Tablet / Moblile)</p>
+                </li>
+                <li>
+                  <p class="work_bold">PAGE</p>
+                  <p>메인 / 상세</p>
+                </li>
+                <li>
+                  <p class="work_bold">SKILLS</p>
+                  <p>
+                    React/ javascript
+                  </p>
+                </li>
+              </ul>
+              <div class="view2">
+                <a href="https://github.com/JiEun-Choi-Dev/blog" target="_blank"
+                  ><p>VIEW</p></a
+                >
+              </div>
+            </div>
+            <img
+              class="work_moc"
+              src="image/web_work%20(9).png"
+              width=""
+              alt="web"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work_con6">
+          <div class="work_detail">
+            <div class="work_text">
+              <p class="work_title">ClubVietnam</p>
+              <p class="work_title2">Project</p>
+              <p>Publishing Maintenance</p>
+              <ul class="detail_con">
+                <li>
+                  <p class="work_bold">INTRO</p>
+                  <p>베트남여행 예약 대행 사이트</p>
+                </li>
+                <li>
+                  <p class="work_bold">TYPE</p>
+                  <p>Responsive (PC / Tablet / Moblile)</p>
+                </li>
+                <li>
+                  <p class="work_bold">PAGE</p>
+                  <p>메인 / 상세</p>
+                </li>
+                <li>
+                  <p class="work_bold">SKILLS</p>
+                  <p>
+                    HTML5 / CSS3 / javascript / jQuery / Bootstrap
+                  </p>
+                </li>
+              </ul>
+              <div class="view">
+                <a href="https://clubvietnam.co.kr/" target="_blank"
+                  ><p>VIEW</p></a
+                >
+              </div>
+            </div>
+            <img
+              class="work_moc"
+              src="image/web_work%20(5).png"
+              width=""
+              alt="web"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work_con5">
+          <div class="work_detail">
+            <div class="work_text">
+              <p class="work_title">GOLPRO</p>
+              <p class="work_title2">Project</p>
+              <p>planning / Design / Publishing</p>
+              <ul class="detail_con">
+                <li>
+                  <p class="work_bold">INTRO</p>
+                  <p>골프 관련 통합 플랫폼</p>
+                </li>
+                <li>
+                  <p class="work_bold">TYPE</p>
+                  <p>Responsive (PC / Moblile)</p>
+                </li>
+                <li>
+                  <p class="work_bold">PAGE</p>
+                  <p>메인 / 상세</p>
+                </li>
+                <li>
+                  <p class="work_bold">SKILLS</p>
+                  <p>
+                    HTML5 / CSS3 / javascript / jQuery / PHP / 그누보드
+                  </p>
+                </li>
+              </ul>
+              <div class="view">
+                <a href="https://golpro.co.kr" target="_blank"><p>VIEW</p></a>
+              </div>
+            </div>
+            <img
+              class="work_moc"
+              src="image/web_work%20(6).png"
+              width=""
+              alt="web"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work_con7">
+          <div class="work_detail">
+            <div class="work_text">
+              <p class="work_title">JOURNAL LAB</p>
+              <p class="work_title2">Project</p>
+              <p>Design / Publishing</p>
+              <ul class="detail_con">
+                <li>
+                  <p class="work_bold">INTRO</p>
+                  <p>해외논문 번역 및 논문 게재 원조 플랫폼</p>
+                </li>
+                <li>
+                  <p class="work_bold">TYPE</p>
+                  <p>Responsive (PC / Tablet / Moblile)</p>
+                </li>
+                <li>
+                  <p class="work_bold">PAGE</p>
+                  <p>메인 / 상세</p>
+                </li>
+                <li>
+                  <p class="work_bold">SKILLS</p>
+                  <p>
+                    HTML5 / CSS3 / javascript / jQuery / PHP / 워드프레스
+                  </p>
+                </li>
+              </ul>
+              <div class="view">
+                <a href="https://journallab.co.kr/" target="_blank"
+                  ><p>VIEW</p></a
+                >
+              </div>
+            </div>
+            <img
+              class="work_moc"
+              src="image/web_work%20(7).png"
+              width=""
+              alt="web"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work_con">
+          <div class="work_detail">
+            <div class="work_text">
+              <p class="work_title">Cartier</p>
+              <p class="work_title2">Renewal Design</p>
+              <p>Design 100% / Publishing 100%</p>
+              <ul class="detail_con">
+                <li>
+                  <p class="work_bold">INTRO</p>
+                  <p>고급 주얼리 &amp; 시계 브랜드</p>
+                </li>
+                <li>
+                  <p class="work_bold">TYPE</p>
+                  <p>Responsive (PC / Tablet / Moblile)</p>
+                </li>
+                <li>
+                  <p class="work_bold">PAGE</p>
+                  <p>메인 / 상세</p>
+                </li>
+                <li>
+                  <p class="work_bold">SKILLS</p>
+                  <p>
+                    Photoshop CS6 / Illustrator CS6<br />
+                    PowerPoint2010
+                  </p>
+                </li>
+              </ul>
+              <div class="view">
+                <a href="cartier.html" target="_blank"><p>VIEW</p></a>
+              </div>
+            </div>
+            <img
+              class="work_moc"
+              src="image/web_work%20(1).png"
+              width=""
+              alt="web"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work_con2">
+          <div class="work_detail">
+            <div class="work_text">
+              <p class="work_title">유기견보호센터</p>
+              <p class="work_title2">Renewal Design</p>
+              <p>Design 100% / Publishing 100%</p>
+              <ul class="detail_con">
+                <li>
+                  <p class="work_bold">INTRO</p>
+                  <p>유기동물 공유 및 입양 사이트</p>
+                </li>
+                <li>
+                  <p class="work_bold">TYPE</p>
+                  <p>PC</p>
+                </li>
+                <li>
+                  <p class="work_bold">PAGE</p>
+                  <p>메인 / 회원가입</p>
+                </li>
+                <li>
+                  <p class="work_bold">SKILLS</p>
+                  <p>Photoshop CS6 / Illustrator CS6 /<br />Html5,Css3</p>
+                </li>
+              </ul>
+              <div class="view2">
+                <a
+                  href="rescue_dog/rescue_dog_protection_center.html"
+                  target="_blank"
+                  ><p>VIEW</p></a
+                >
+              </div>
+            </div>
+            <img
+              class="work_moc"
+              src="image/web_work%20(2).png"
+              width=""
+              alt="web"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work_con3">
+          <div class="work_detail">
+            <div class="work_text">
+              <p class="work_title">배상면주가</p>
+              <p class="work_title2">Renewal Design</p>
+              <p>Design 100% / Publishing 100%</p>
+              <ul class="detail_con">
+                <li>
+                  <p class="work_bold">INTRO</p>
+                  <p>막걸리, 소주 등의 전통주 브랜드</p>
+                </li>
+                <li>
+                  <p class="work_bold">TYPE</p>
+                  <p>Responsive (PC / Tablet / Moblile)</p>
+                </li>
+                <li>
+                  <p class="work_bold">PAGE</p>
+                  <p>메인 / 상세 / 브랜드스토리</p>
+                </li>
+                <li>
+                  <p class="work_bold">SKILLS</p>
+                  <p>
+                    Photoshop CS6 / Illustrator CS6 / PowerPoint2010
+                    <br />Html5,Css3,Jquery
+                  </p>
+                </li>
+              </ul>
+              <div class="view">
+                <a href="brewery/index.html" target="_blank"><p>VIEW</p></a>
+              </div>
+            </div>
+            <img
+              class="work_moc"
+              src="image/web_work%20(3).png"
+              width=""
+              alt="web"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="work">
+        <div class="work_con4">
+          <div class="work_detail">
+            <div class="work_text">
+              <p class="work_title">Aveeno</p>
+              <p class="work_title2">Renewal Design</p>
+              <p>Design 100%</p>
+              <ul class="detail_con">
+                <li>
+                  <p class="work_bold">INTRO</p>
+                  <p>전연령층 FACE &amp; BODY 화장품 브랜드</p>
+                </li>
+                <li>
+                  <p class="work_bold">TYPE</p>
+                  <p>PC</p>
+                </li>
+                <li>
+                  <p class="work_bold">PAGE</p>
+                  <p>메인</p>
+                </li>
+                <li>
+                  <p class="work_bold">SKILLS</p>
+                  <p>Photoshop CS6 / Illustrator CS6</p>
+                </li>
+              </ul>
+              <div class="view">
+                <a href="aveeno.html" target="_blank"><p>VIEW</p></a>
+              </div>
+            </div>
+            <img
+              class="work_moc"
+              src="image/web_work%20(4).png"
+              width=""
+              alt="web"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="related">
+      <div class="related_bg">
+        <div class="related_con">
+          <p style="color: #f2a96c; font-size: 2rem; font-weight: bold;">
+            Related Work
+          </p>
+          <a href="app.html"
+            ><div class="related_wrap">
+              <div class="related_img_con">
+                <img src="image/relate%20(1).png" width="25%;" alt="app" />
+                <div class="related_hover"><p class="hover_text">APP</p></div>
+              </div>
+            </div></a
+          >
+          <a href="introduce.html"
+            ><div class="related_wrap">
+              <div class="related_img_con">
+                <img src="image/relate%20(2).png" width="25%" alt="introduce" />
+                <div class="related_hover">
+                  <p class="hover_text">Who Am I ?</p>
+                </div>
+              </div>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="bottom_text">
+        <p>Front-end Developer. JIEUN CHOI</p>
+        <p>jehy0807@gmail.com</p>
+        <p>010 . 4328 . 4577</p>
+        <p>Copyright 2019.Ji-eun Choi.All right reserved</p>
+      </div>
+      <div style="opacity: 0.8;" class="totop_con">
+        <a href="https://github.com/JiEun-Choi-Dev" target="_blank">
+          <p
+            style="
+              font-size: 0.9rem;
+              text-align: center;
+              font-weight: bold;
+              padding: 0;
+              background-color: transparent;
+            "
+          >
+            <svg
+              enable-background="new 0 0 24 24"
+              height="50"
+              viewBox="0 0 24 24"
+              width="50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m12 .5c-6.63 0-12 5.28-12 11.792 0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56 4.801-1.548 8.236-5.97 8.236-11.173 0-6.512-5.373-11.792-12-11.792z"
+                fill="#4f4f4d;"
+              />
+            </svg>
+          </p>
+        </a>
+        <a href="#top">
+          <p
+            style="
+              font-size: 0.9rem;
+              text-align: center;
+              font-weight: bold;
+              margin-top: 10px;
+            "
+          >
+            TOP
+          </p></a
+        >
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,277 +1,379 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<title>디자인을 읽는 퍼블리셔! 최지은 포트폴리오</title>
-		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="favicon.ico">
-        <link href="introduce.css" rel="stylesheet" type="text/css">
-		<link href="reset.css" rel="stylesheet" type="text/css">
-		<link href="./js/slick.css" rel="stylesheet" type="text/css">
-		<link href="./js/slick-theme.css" rel="stylesheet" type="text/css">
-		<link href="./js/swiper.min.css" rel="stylesheet" type="text/css">
-		<link href="./js/swiper.css" rel="stylesheet" type="text/css">
-		<link href="animate.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="./js/jquery-1.12.4.min.js">
-		</script>
-		<script type="text/javascript" src="./js/slick.js">		
-		</script>
-		<script type="text/javascript" src="./js/swiper.min.js">		
-		</script>
-		<script type="text/javascript" src="./js/wow.min.js">		
-		</script>
-		<script type="text/javascript">
-			new WOW().init();
-		</script>
-		<script type="text/javascript">
-	
-		$(function(){
-   window.onload = function () {
-	   var burger = $('.menu-trigger');
+  <head>
+    <meta charset="utf-8" />
+    <title>디자인을 읽는 프론트엔드 개발자! 최지은 포트폴리오</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="introduce.css" rel="stylesheet" type="text/css" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="./js/slick.css" rel="stylesheet" type="text/css" />
+    <link href="./js/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="./js/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="./js/swiper.css" rel="stylesheet" type="text/css" />
+    <link href="animate.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/slick.js"></script>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+    <script type="text/javascript" src="./js/wow.min.js"></script>
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+    <script type="text/javascript">
+      $(function () {
+        window.onload = function () {
+          var burger = $(".menu-trigger");
 
-				burger.each(function(index){
-					var $this = $(this);
+          burger.each(function (index) {
+            var $this = $(this);
 
-					$this.on('click', function(e){
-						e.preventDefault();
-						$(this).toggleClass('active-' + (index+1));
-					})
-					});
- 
+            $this.on("click", function (e) {
+              e.preventDefault();
+              $(this).toggleClass("active-" + (index + 1));
+            });
+          });
         };
-   
-         function up(){
-               $(".scrollText > h5").animate({marginTop:22},700).animate({marginTop:0},300);
-                }
-            var scrollUp = setInterval(up,300)
- }) 
-		</script>
-		<script type="text/javascript">
-			function functhisSize(){
-				var size= window.innerWidth;
-			console.log(size);
-			$("#leftmenuArea").css("width",size+"px");
-			}
-			$(function(){
-				$(window).resize(functhisSize);
-				functhisSize();
-			});
-		$(document).ready(function(){
-			$("#leftmenuArea").hide();
-				
-			$(".menu-trigger").click(function(){
-				$("#leftmenuArea").animate({width:'toggle'});
-			})
-		
-		})
-		</script>
-		<script type="text/javascript">
-		$(document).ready(function(){
-			//top버튼
-			if($(this).scrollTop()==0){
-					$(".totop_con").hide();
-				}
-			$(document).scroll(function(){
-				if($(this).scrollTop()>0){
-					$(".totop_con").show();
-				}
-				else{$(".totop_con").hide();
-				}
-			})
-			$(".totop_con").click(function(){
-				$("html,body").animate({
-					scrollTop:0
-				},150)
-			});
-		});</script>
-		
-		
 
-    </head>
-    <body style="overflow-x:hidden; overflow-y:auto;">
-		<div class="top_con">
-			<div class="top_nav">
-				<a href="index.html"><img src="image/logo.png" width="" alt="logo"></a>
-				<p class="introduce_title">쓰임있는 사람</p>
-				<div class="menu-trigger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<div id="leftmenuArea">
-				<ul class="menu_nav">
-					<li><a href="web.html">WEB</a></li>
-					<li><a href="app.html">
-						APP</a></li>
-					<li><a href="introduce.html">
-						WHO AM I ?</a></li>
-				</ul>
-				</div>
-			</div>
-		</div>
-		<section class="introduce">
-			<div class="intro_bg">
-				<div class="intro_text">
-					<p>안녕하세요.
-						<br>UI / UX 디자이너 &amp; 퍼블리셔 최지은 입니다.</p>
+        function up() {
+          $(".scrollText > h5")
+            .animate({ marginTop: 22 }, 700)
+            .animate({ marginTop: 0 }, 300);
+        }
+        var scrollUp = setInterval(up, 300);
+      });
+    </script>
+    <script type="text/javascript">
+      function functhisSize() {
+        var size = window.innerWidth;
+        console.log(size);
+        $("#leftmenuArea").css("width", size + "px");
+      }
+      $(function () {
+        $(window).resize(functhisSize);
+        functhisSize();
+      });
+      $(document).ready(function () {
+        $("#leftmenuArea").hide();
 
-					<p><br>하루 아침에 피는 꽃은 없습니다.
-					<br>그 한 송이의 꽃을 피우기 위해 
-						<br>부단히 노력하며 <span class="po">그 때</span>를 기다립니다.</p>
-					<p>		
-					<br>누구나 때가 있습니다.
-					<br>저에겐 지금이 <span class="po">그 때</span> 입니다.
- 					</p>
-				</div>
-			</div>
-			<div class="keword">
-				<div class="keword_title">
-				<p class="keword_text">
-					MY KEYWORD
-				</p>
-					<p class="keword_line"></p>
-				</div>
-				<div class="keword_con">
-					<div class="key">
-						<p>PATIENCE</p>
-					</div>
-					<div class="key">
-						<p>RESPONSIBLE</p>
-					</div>
-					<div class="key">
-						<p>SINCERITY</p>
-					</div>
-				</div>
-			</div>
-			<div class="introduce_con">
-				<div class="introduce1">
-					<img class="me" src="image/picture.png" width="" alt="jieunchoi">
-					<ul class="introduce1_detail">
-						<li><p class="detail_title">NAME</p>
-						<p style="margin-left: 20px;" class="detail_con">최지은</p></li>
-						<li><p class="detail_title">BIRTH</p>
-						<p class="detail_con">1988 .08 .07</p></li>
-						<li><p class="detail_title">ADRESS</p>
-						<p class="detail_con">경기도 부천시</p></li>
-						<li><p class="detail_title">EDUCATION</p>
-						<li><ul class="Education">
-							<li><p>부천북고등학교</p><br><br><p class="date">2004-2007</p></li>
-							<li><p>시립인천전문대<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp행정과</p><br><p class="date">2007-2009</p></li>
-							<li><p>그린아카데미<br>하이브리드앱</p><br><p class="date">2018-2019</p></li>
-							</ul></li>
-					</ul>
-				</div>
-				<div class="introduce2">
-					<ul class="introduce2_detail">
-						<li class="detail_title1">SKILL</li>
-						<li class="skill_chart">
-							<ul class="skill">
-								<li><img src="image/skill%20(1).png" width="" alt="skill"></li>
-								<li><img src="image/skill%20(2).png" width="" alt="skill"></li>
-								<li><img src="image/skill%20(3).png" width="" alt="skill"></li>
-								<li><img src="image/skill%20(4).png" width="" alt="skill"></li>
-								<li><img src="image/skill%20(5).png" width="" alt="skill"></li>
-								<li><img src="image/skill%20(6).png" width="" alt="skill"></li>
-								<li><img src="image/skill%20(7).png" width="" alt="skill"></li>
-							</ul>
-							<div class="chart">
-							<div id="bar1" class="barfiller">
-								<div class="tipWrap">
-								<span class="tip"></span>
-								</div>
-								<span class="fill" data-percentage="80"></span>
-							</div>
-							<div id="bar2" class="barfiller">
-								<div class="tipWrap">
-								<span class="tip"></span>
-								</div>
-								<span class="fill" data-percentage="80"></span>
-							</div>
-							<div id="bar3" class="barfiller">
-								<div class="tipWrap">
-								<span class="tip"></span>
-								</div>
-								<span class="fill" data-percentage="80"></span>
-							</div>
-							<div id="bar4" class="barfiller">
-								<div class="tipWrap">
-								<span class="tip"></span>
-								</div>
-								<span class="fill" data-percentage="80"></span>
-							</div>
-							<div id="bar5" class="barfiller">
-								<div class="tipWrap">
-								<span class="tip"></span>
-								</div>
-								<span class="fill" data-percentage="50"></span>
-							</div>
-							<div id="bar6" class="barfiller">
-								<div class="tipWrap">
-								<span class="tip"></span>
-								</div>
-								<span class="fill" data-percentage="60"></span>
-							</div>
-							<div id="bar7" class="barfiller">
-								<div class="tipWrap">
-								<span class="tip"></span>
-								</div>
-							<span class="fill" data-percentage="80"></span>
-							</div>
-							<script src="js/jquery.barfiller.js" type="text/javascript"></script>
-							<script type="text/javascript">
-								
-										$(window).scroll(function () {
-									 var height = $(document).scrollTop();
-									 console.log(height);
-									 if(height>=1600){
-									  	$('#bar1').barfiller({ barColor: '#f2a769' });
-										$('#bar2').barfiller({ barColor: '#f2a769' });
-										$('#bar3').barfiller({ barColor: '#f2a769' });
-										$('#bar4').barfiller({ barColor: '#f2a769' });
-										$('#bar5').barfiller({ barColor: '#f2a769' });
-										$('#bar6').barfiller({ barColor: '#f2a769' });
-										$('#bar7').barfiller({ barColor: '#f2a769' });
-									 }
-									});
+        $(".menu-trigger").click(function () {
+          $("#leftmenuArea").animate({ width: "toggle" });
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //top버튼
+        if ($(this).scrollTop() == 0) {
+          $(".totop_con").hide();
+        }
+        $(document).scroll(function () {
+          if ($(this).scrollTop() > 0) {
+            $(".totop_con").show();
+          } else {
+            $(".totop_con").hide();
+          }
+        });
+        $(".totop_con").click(function () {
+          $("html,body").animate(
+            {
+              scrollTop: 0,
+            },
+            150
+          );
+        });
+      });
+    </script>
+  </head>
+  <body style="overflow-x: hidden; overflow-y: auto;">
+    <div class="top_con">
+      <div class="top_nav">
+        <a href="index.html"
+          ><img src="image/logo.png" width="" alt="logo"
+        /></a>
+        <p class="introduce_title">쓰임있는 사람</p>
+        <div class="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div id="leftmenuArea">
+          <ul class="menu_nav">
+            <li><a href="web.html">WEB</a></li>
+            <li><a href="app.html"> APP</a></li>
+            <li><a href="introduce.html"> WHO AM I ?</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <section class="introduce">
+      <div class="intro_bg">
+        <div class="intro_text">
+          <p>안녕하세요. <br />프론트엔드 개발자 최지은 입니다.</p>
 
-							</script>
-							</div>
-						</li>
-						<li class="detail_title certi">CERTIFICATE</li>
-						<li><ul class="certificate">
-								<li>사무자동화산업기사</li>
-								<li>전산회계 2급</li>
-								<li>사회복지사 2급</li>
-								<li>컴퓨터그래픽스운용기능사(필기)</li>
-							</ul></li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		<section class="related">
-			<div class="related_bg">
-				<div class="related_con">
-					<p style="color:#f2a96c;font-size:2rem;font-weight: bold;">Related Work</p>
-					<a href="web.html"><div class="related_wrap">
-					<div class="related_img_con">
-						<img src="image/relate%20(3).png" width="25%;" alt="app"><div class="related_hover"><p class="hover_text">WEB</p></div></div></div></a>
-					<a href="introduce.html"><div class="related_wrap">
-					<div class="related_img_con">
-						<img src="image/relate%20(1).png" width="25%" alt="introduce"><div class="related_hover"><p class="hover_text">APP</p></div></div></div></a>
-				</div>
-			</div>
-		</section>
-		<footer>
-			<div class="bottom_text">
-			<p>UI / UX Designer &amp; Publisher. JIEUN CHOI</p>
-				<p>moto0807@naver.com</p>
-				<p>010 . 4328 . 4577</p>
-				<p>Copyright 2019.Ji-eun Choi.All right reserved</p>
-			</div>
-			<div style="opacity: 0.8;" class="totop_con"><a href="#top">
-				<p style="font-size: 0.9rem;text-align: center;font-weight:bold">TOP</p></a>
-			</div>
-		</footer>
-
-    </body>  
+          <p>
+            <br />하루 아침에 피는 꽃은 없습니다. <br />그 한 송이의 꽃을 피우기
+            위해 <br />부단히 노력하며 <span class="po">그 때</span>를
+            기다립니다.
+          </p>
+          <p>
+            <br />누구나 때가 있습니다. <br />저에겐 지금이
+            <span class="po">그 때</span> 입니다.
+          </p>
+        </div>
+      </div>
+      <div class="keword">
+        <div class="keword_title">
+          <p class="keword_text">
+            MY KEYWORD
+          </p>
+          <p class="keword_line"></p>
+        </div>
+        <div class="keword_con">
+          <div class="key">
+            <p>PATIENCE</p>
+          </div>
+          <div class="key">
+            <p>RESPONSIBLE</p>
+          </div>
+          <div class="key">
+            <p>SINCERITY</p>
+          </div>
+        </div>
+      </div>
+      <div class="introduce_con">
+        <div class="introduce1">
+          <img class="me" src="image/jieun_dev.png" width="" alt="jieunchoi" />
+          <ul class="introduce1_detail">
+            <li>
+              <p class="detail_title">NAME</p>
+              <p style="margin-left: 20px;" class="detail_con">최지은</p>
+            </li>
+            <li>
+              <p class="detail_title">BIRTH</p>
+              <p class="detail_con">1988 .08 .07</p>
+            </li>
+            <li>
+              <p class="detail_title">ADRESS</p>
+              <p class="detail_con">경기도 부천시</p>
+            </li>
+            <li><p class="detail_title">EDUCATION & CAREER</p></li>
+            <li>
+              <ul class="Education">
+                <li>
+                  <p>부천북고등학교</p>
+                  <br /><br />
+                  <p class="date">2004-2007</p>
+                </li>
+                <li>
+                  <p>
+                    시립인천전문대<br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp행정과
+                  </p>
+                  <br />
+                  <p class="date">2007-2009</p>
+                </li>
+                <li>
+                  <p>그린아카데미<br />하이브리드앱</p>
+                  <br />
+                  <p class="date">2018-2019</p>
+                </li>
+                <li>
+                  <p>렉스코드</p>
+                  <br />
+                  <p class="date">19.04-19.06</p>
+                </li>
+                <li>
+                  <p>소프트랩스</p>
+                  <br />
+                  <p class="date">19.08-20.04</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="introduce2">
+          <ul class="introduce2_detail">
+            <li class="detail_title1">SKILL</li>
+            <li class="skill_chart">
+              <ul class="skill">
+                <li>
+                  <img src="image/skill%20(1).png" width="" alt="skill" />
+                </li>
+                <li>
+                  <img src="image/skill%20(2).png" width="" alt="skill" />
+                </li>
+                <li>
+                  <img src="image/skill%20(3).png" width="" alt="skill" />
+                </li>
+                <li>
+                  <img src="image/skill%20(4).png" width="" alt="skill" />
+                </li>
+                <li>
+                  <img src="image/skill%20(8).png" width="" alt="skill" />
+                </li>
+                <li>
+                  <img src="image/skill%20(9).png" width="" alt="skill" />
+                </li>
+                <li>
+                  <img src="image/skill%20(10).png" width="" alt="skill" />
+                </li>
+                <li>
+                  <img src="image/skill%20(11).png" width="" alt="skill" />
+                </li>
+              </ul>
+              <div class="chart">
+                <div id="bar1" class="barfiller">
+                  <div class="tipWrap">
+                    <span class="tip"></span>
+                  </div>
+                  <span class="fill" data-percentage="80"></span>
+                </div>
+                <div id="bar2" class="barfiller">
+                  <div class="tipWrap">
+                    <span class="tip"></span>
+                  </div>
+                  <span class="fill" data-percentage="80"></span>
+                </div>
+                <div id="bar3" class="barfiller">
+                  <div class="tipWrap">
+                    <span class="tip"></span>
+                  </div>
+                  <span class="fill" data-percentage="90"></span>
+                </div>
+                <div id="bar4" class="barfiller">
+                  <div class="tipWrap">
+                    <span class="tip"></span>
+                  </div>
+                  <span class="fill" data-percentage="90"></span>
+                </div>
+                <div id="bar5" class="barfiller">
+                  <div class="tipWrap">
+                    <span class="tip"></span>
+                  </div>
+                  <span class="fill" data-percentage="50"></span>
+                </div>
+                <div id="bar6" class="barfiller">
+                  <div class="tipWrap">
+                    <span class="tip"></span>
+                  </div>
+                  <span class="fill" data-percentage="60"></span>
+                </div>
+                <div id="bar7" class="barfiller">
+                  <div class="tipWrap">
+                    <span class="tip"></span>
+                  </div>
+                  <span class="fill" data-percentage="50"></span>
+                </div>
+                <div id="bar8" class="barfiller">
+                  <div class="tipWrap">
+                    <span class="tip"></span>
+                  </div>
+                  <span class="fill" data-percentage="60"></span>
+                </div>
+                <script
+                  src="js/jquery.barfiller.js"
+                  type="text/javascript"
+                ></script>
+                <script type="text/javascript">
+                  $(window).scroll(function () {
+                    var height = $(document).scrollTop();
+                    console.log(height);
+                    if (height >= 1600) {
+                      $("#bar1").barfiller({ barColor: "#f2a769" });
+                      $("#bar2").barfiller({ barColor: "#f2a769" });
+                      $("#bar3").barfiller({ barColor: "#f2a769" });
+                      $("#bar4").barfiller({ barColor: "#f2a769" });
+                      $("#bar5").barfiller({ barColor: "#f2a769" });
+                      $("#bar6").barfiller({ barColor: "#f2a769" });
+                      $("#bar7").barfiller({ barColor: "#f2a769" });
+                      $("#bar8").barfiller({ barColor: "#f2a769" });
+                    }
+                  });
+                </script>
+              </div>
+            </li>
+            <li class="detail_title certi">CERTIFICATE</li>
+            <li>
+              <ul class="certificate">
+                <li>사무자동화산업기사</li>
+                <li>전산회계 2급</li>
+                <li>사회복지사 2급</li>
+                <li>컴퓨터그래픽스운용기능사(필기)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="related">
+      <div class="related_bg">
+        <div class="related_con">
+          <p style="color: #f2a96c; font-size: 2rem; font-weight: bold;">
+            Related Work
+          </p>
+          <a href="web.html"
+            ><div class="related_wrap">
+              <div class="related_img_con">
+                <img src="image/relate%20(3).png" width="25%;" alt="app" />
+                <div class="related_hover"><p class="hover_text">WEB</p></div>
+              </div>
+            </div></a
+          >
+          <a href="introduce.html"
+            ><div class="related_wrap">
+              <div class="related_img_con">
+                <img src="image/relate%20(1).png" width="25%" alt="introduce" />
+                <div class="related_hover"><p class="hover_text">APP</p></div>
+              </div>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="bottom_text">
+        <p>Front-end Developer. JIEUN CHOI</p>
+        <p>jehy0807@gmail.com</p>
+        <p>010 . 4328 . 4577</p>
+        <p>Copyright 2019.Ji-eun Choi.All right reserved</p>
+      </div>
+      <div style="opacity: 0.8;" class="totop_con">
+        <a href="https://github.com/JiEun-Choi-Dev" target="_blank">
+          <p
+            style="
+              font-size: 0.9rem;
+              text-align: center;
+              font-weight: bold;
+              padding: 0;
+              background-color: transparent;
+            "
+          >
+            <svg
+              enable-background="new 0 0 24 24"
+              height="50"
+              viewBox="0 0 24 24"
+              width="50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m12 .5c-6.63 0-12 5.28-12 11.792 0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56 4.801-1.548 8.236-5.97 8.236-11.173 0-6.512-5.373-11.792-12-11.792z"
+                fill="#4f4f4d;"
+              />
+            </svg>
+          </p>
+        </a>
+        <a href="#top">
+          <p
+            style="
+              font-size: 0.9rem;
+              text-align: center;
+              font-weight: bold;
+              margin-top: 10px;
+            "
+          >
+            TOP
+          </p></a
+        >
+      </div>
+    </footer>
+  </body>
 </html>
