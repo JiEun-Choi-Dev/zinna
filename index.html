@@ -1,10 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
-    <title>zinna</title>
     <meta charset="utf-8" />
+    <title>디자인을 읽는 퍼블리셔! 최지은 포트폴리오</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="./js/slick.css" rel="stylesheet" type="text/css" />
+    <link href="./js/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="./js/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="animate.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/slick.js"></script>
+    <script type="text/javascript" src="./js/swiper.min.js"></script>
+    <script type="text/javascript" src="./js/wow.min.js"></script>
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+    <script type="text/javascript">
+      $(function () {
+        window.onload = function () {
+          var burger = $(".menu-trigger");
+
+          burger.each(function (index) {
+            var $this = $(this);
+
+            $this.on("click", function (e) {
+              e.preventDefault();
+              $(this).toggleClass("active-" + (index + 1));
+            });
+          });
+          $(".top_con").each(function () {
+            // 개별적으로 Wheel 이벤트 적용
+            $(this).on("mousewheel DOMMouseScroll", function (e) {
+              e.preventDefault();
+              var delta = 0;
+              if (!event) event = window.event;
+              if (event.wheelDelta) {
+                delta = event.wheelDelta / 120;
+                if (window.opera) delta = -delta;
+              } else if (event.detail) delta = -event.detail / 3;
+              var moveTop = null;
+              // 마우스휠을 위에서 아래로
+              if (delta < 0) {
+                if ($(this).next() != undefined) {
+                  moveTop = $(this).next().offset().top;
+                }
+                // 마우스휠을 아래에서 위로
+              } else {
+                if ($(this).prev() != undefined) {
+                  moveTop = $(this).prev().offset().top;
+                }
+              }
+              // 화면 이동 0.8초(800)
+              $("html,body")
+                .stop()
+                .animate(
+                  {
+                    scrollTop: moveTop + "px",
+                  },
+                  {
+                    duration: 800,
+                    complete: function () {},
+                  }
+                );
+            });
+          });
+        };
+
+        function up() {
+          $(".scrollText > h5")
+            .animate({ marginTop: 22 }, 700)
+            .animate({ marginTop: 0 }, 300);
+        }
+        var scrollUp = setInterval(up, 300);
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        //top버튼
+        if ($(this).scrollTop() == 0) {
+          $(".totop_con").hide();
+        }
+        $(document).scroll(function () {
+          if ($(this).scrollTop() > 0) {
+            $(".totop_con").show();
+          } else {
+            $(".totop_con").hide();
+          }
+        });
+        $(".totop_con").click(function () {
+          $("html,body").animate(
+            {
+              scrollTop: 0,
+            },
+            150
+          );
+        });
+      });
+    </script>
+
+    <script type="text/javascript">
+      function functhisSize() {
+        var size = window.innerWidth;
+        console.log(size);
+        $("#leftmenuArea").css("width", size + "px");
+      }
+      $(function () {
+        $(window).resize(functhisSize);
+        functhisSize();
+      });
+      $(document).ready(function () {
+        $("#leftmenuArea").hide();
+
+        $(".menu-trigger").click(function () {
+          $("#leftmenuArea").animate({ width: "toggle" });
+        });
+      });
+    </script>
   </head>
-  <body>
-    <h1>zinna page</h1>
+  <body style="overflow-x: hidden; overflow-y: auto">
+    <div class="top_con">
+      <video width="100%" height="100%" class="mainvideo" autoplay muted loop>
+        <source src="image/flower.mp4" type="video/mp4" />
+      </video>
+      <div class="top_nav">
+        <a href="index.html">
+          <img src="image/logo.png" width="" alt="logo"
+        /></a>
+        <div class="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div id="leftmenuArea">
+          <ul class="menu_nav">
+            <li><a href="web.html">WEB</a></li>
+            <li><a href="app.html"> APP</a></li>
+            <li><a href="introduce.html"> WHO AM I ?</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="intro_con">
+        <div class="intro_text">
+          <p class="intro1">This is the Moment</p>
+          <p class="intro2">
+            하루 아침에<br />
+            피는<br />
+            꽃은 없다
+          </p>
+        </div>
+      </div>
+      <!--
+			<div class="intro_scroll">
+			<p class="scroll_text">Scroll</p>
+			<p class="scroll1"></p>
+			<p class="scroll2"></p>
+			<p class="scroll3"></p>
+			</div>
+-->
+      <div class="scrollText">
+        <h5>SCROLL</h5>
+      </div>
+    </div>
+    <div class="work">
+      <div class="wrap">
+        <ul class="work_nav">
+          <li>
+            <a href="web.html"
+              ><img src="image/main_work%20(1).png" alt="web"
+            /></a>
+          </li>
+          <li>
+            <a href="app.html"
+              ><img src="image/main_work%20(2).png" alt="app"
+            /></a>
+          </li>
+          <li>
+            <a href="introduce.html"
+              ><img src="image/main_work%20(3).png" alt="introduce"
+            /></a>
+          </li>
+        </ul>
+        <div class="work_btn">
+          <a href="web.html"><p>WEB</p></a>
+          <a href="app.html"><p>APP</p></a>
+          <a href="introduce.html"><p>WHO AM I ?</p></a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="bottom_text">
+        <p>UI / UX Designer &amp; Publisher. JIEUN CHOI</p>
+        <p>moto0807@naver.com</p>
+        <p>010 . 4328 . 4577</p>
+        <p>Copyright 2019.Ji-eun Choi.All right reserved</p>
+      </div>
+      <div style="opacity: 0.8" class="totop_con">
+        <a href="#top">
+          <p style="font-size: 0.9rem; text-align: center; font-weight: bold">
+            TOP
+          </p></a
+        >
+      </div>
+    </footer>
   </body>
 </html>

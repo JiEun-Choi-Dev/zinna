@@ -1,0 +1,820 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+* {
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.intro_bg {
+  background-image: url(images/intro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 790px;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.top_nav1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+.top_nav1_left {
+  text-align: left;
+  visibility: hidden;
+}
+.top_menu_nav {
+  width: 100%;
+  height: auto;
+}
+.top_nav1_right {
+  vertical-align: top;
+}
+.top_nav1_right p {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.top_nav1_right img {
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #1d1d1d;
+  font-weight: bold;
+  position: relative;
+}
+.menu li ul {
+  width: 100%;
+  display: none;
+  height: auto;
+  position: absolute;
+  left: -25%;
+  top: 40px;
+  background-color: white;
+  padding-top: 10px;
+}
+.brand_nav {
+  display: flex;
+  justify-content: space-between;
+  flex: 1, 1, 0;
+  padding: 10px 300px;
+}
+.brand_nav li {
+  font-size: 1rem;
+  display: inline-block;
+  width: 18%;
+  height: auto;
+  color: #908e8e;
+  /*	padding:5% 0;*/
+
+  margin: 1%;
+}
+.brand li {
+  width: 22%;
+  padding: 1% 0;
+  background-color: #e7e7e7;
+  margin: 1%;
+  color: #908e8e;
+}
+.nav_box {
+  height: 0;
+  position: relative;
+  padding-top: 90%;
+  background-color: #e7e7e7;
+  overflow: hidden;
+}
+.nav_box img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+}
+.nav_box p {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  height: auto;
+}
+.box2 {
+  background-color: #e7e7e7;
+  box-sizing: border-box;
+}
+.box2 p {
+  bottom: 40%;
+  font-size: 1.5rem;
+}
+
+.jewelry {
+  margin-top: 100px;
+}
+.jewer_img3 {
+  margin-top: 24px;
+}
+.jewelry_con {
+  display: flex;
+}
+.j_con_left {
+  float: left;
+  width: 48%;
+  flex: 1 1 0;
+}
+.j_con_right {
+  float: left;
+  width: 48%;
+  flex: 1 1 0;
+}
+.wedding {
+  width: 100%;
+  height: 650px;
+  clear: both;
+  background-image: url(images/fixed_wedding.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: 100px;
+}
+.wed_img {
+  width: 6%;
+  margin: 0 auto;
+  flex: 1 1 0;
+}
+.wedding_text {
+  color: white;
+  font-family: "Playfair Display", serif, sans-serif;
+  text-align: center;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wed_text_title {
+  font-size: 3.5rem;
+  flex: 1 1 0;
+}
+.wed_text {
+  font-size: 1.2rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex: 1 1 0;
+}
+.wed_text_box {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  margin-top: 40px;
+  transition: 0.2s ease-in-out;
+  flex: 1 1 0;
+}
+.wed_text_box:hover {
+  background-color: white;
+  color: #63636f;
+}
+.watch_con {
+  width: 100%;
+  margin-top: 100px;
+}
+.watch_con li {
+  display: inline-block;
+}
+.watch_con li:nth-child(1),
+.watch_con li:nth-child(2),
+.watch_con li:nth-child(3) {
+  margin: 10px;
+}
+.watch_con li:nth-child(5),
+.watch_con li:nth-child(6) {
+  width: 46%;
+  margin: 8px;
+  margin-top: 10px;
+}
+.watch_con li:nth-child(4) {
+  display: none;
+}
+.technic {
+  width: 100%;
+  background-image: url(images/fixed_bg_watch.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+  height: 740px;
+  text-align: right;
+}
+.technic_text {
+  color: white;
+  text-align: right;
+  padding: 100px 0;
+}
+.tech_title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.tech_box {
+  width: 205px;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: 2px solid white;
+  margin-top: 270px;
+  transition: 0.2s ease-in-out;
+  margin-right: 0px;
+  float: right;
+  box-sizing: content-box;
+}
+.tech_box:hover {
+  background-color: white;
+  color: black;
+}
+.po {
+  margin-right: 15px;
+  font-size: 1.3rem;
+}
+.pinterest {
+  clear: both;
+  margin-top: 100px;
+}
+.pin_title {
+  margin-bottom: 50px;
+}
+.pin_title img {
+  display: inline-block;
+}
+.pin_title p {
+  width: 300px;
+  font-size: 2.2rem;
+  color: #89898b;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 30px;
+}
+.pin_con li {
+  display: inline-block;
+}
+.pin_con img {
+  margin: 5px;
+}
+.pin_text {
+  text-align: left;
+  margin-left: 10px;
+}
+.text_square {
+  background-color: #89898b;
+  width: 30px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.pin_text_con {
+  font-size: 1.2rem;
+  color: #89898b;
+  display: inline-block;
+}
+.acc {
+  background-image: url(images/acc.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 640px;
+  margin-top: 100px;
+  position: relative;
+}
+.acc_box {
+  text-align: right;
+  background-color: #840b15;
+  color: white;
+  font-size: 2rem;
+  width: 300px;
+  padding: 10px 20px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 40px;
+  right: 360px;
+}
+.service {
+  margin-top: 100px;
+}
+.service_con li {
+  width: 24%;
+  display: inline-block;
+  margin: -2px;
+  margin-top: -5px;
+}
+
+.service_wrap {
+  position: relative;
+  padding-top: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.service_wrap2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: 99;
+  background-color: rgba(132, 11, 21, 0.7);
+  display: none;
+}
+.service_wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+.service_wrap p {
+  position: absolute;
+  top: 42%;
+  left: 32%;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+  text-align: center;
+  border-top: 5px solid #840b15;
+  padding-top: 15px;
+  font-size: 1.1rem;
+  color: #840b15;
+  z-index: 100;
+}
+.service_wrap2 p {
+  position: absolute;
+  top: 42%;
+  left: 32%;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+  text-align: center;
+  border-top: 5px solid #fff;
+  padding-top: 15px;
+  font-size: 1.5rem;
+  color: white;
+  z-index: 999;
+}
+.celeb_con {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.celeb_con img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: auto;
+}
+.celeb {
+  margin-top: 100px;
+  background-color: #e7e7e7;
+  padding: 50px 0;
+}
+
+.celeb_title {
+  font-size: 2.5rem;
+  color: #840b15;
+  margin-bottom: 50px;
+}
+.celeb_title span {
+  font-size: 3.5rem;
+}
+.single-items {
+}
+footer {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding: 50px 0;
+}
+.bottom_text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.bottom_text li {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+  font-size: 0.8rem;
+}
+.bottom_title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.number {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+.bottom_text2 {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom_text2_left {
+  text-align: left;
+  font-size: 0.7rem;
+  width: 100%;
+}
+.bottom_text2_right {
+  text-align: right;
+  width: 100%;
+  margin-top: 30px;
+}
+.sns_logo a:nth-child(3),
+.sns_logo a:nth-child(6) {
+  margin-left: 5px;
+}
+.bottom_line {
+  border-top: 1px solid #e7e7e7;
+  margin-bottom: 30px;
+}
+.slider-container {
+  position: relative;
+}
+.next1 {
+  position: absolute;
+  top: 40%;
+  right: -80px;
+  filter: sepia(100%) hue-rotate(90deg) saturate(0%);
+  cursor: pointer;
+}
+.prev1 {
+  position: absolute;
+  top: 40%;
+  left: -80px;
+  filter: sepia(100%) hue-rotate(90deg) saturate(0%);
+  cursor: pointer;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .wrap {
+    width: 95%;
+  }
+
+  .left_img {
+    width: 128%;
+  }
+  .jewelry_con img {
+    max-width: 100%;
+  }
+  .jewer_img3 {
+    margin-top: 15px;
+  }
+  .j_con_right {
+    margin-left: 20px;
+  }
+  .wedding {
+    height: 600px;
+  }
+  .watch_con li:nth-child(1),
+  .watch_con li:nth-child(2),
+  .watch_con li:nth-child(3) {
+    width: 30%;
+  }
+  .watch_con li:nth-child(5),
+  .watch_con li:nth-child(6) {
+    width: 46.9%;
+    margin: 8px;
+    margin-top: 10px;
+  }
+  .pin_con li {
+    width: 49%;
+    margin: 2px;
+    margin-top: 20px;
+  }
+  .pin_con li img {
+    margin: 0;
+  }
+  .pin_text_con {
+    font-size: 1rem;
+  }
+  .acc {
+    height: 450px;
+    background-size: cover;
+  }
+  .acc_box {
+    font-size: 1rem;
+    width: 150px;
+    right: 40px;
+    bottom: 40px;
+  }
+  .service_wrap p {
+    font-size: 0.6rem;
+  }
+  .number {
+    font-size: 1.3rem;
+  }
+  .sns_logo img {
+    width: 30%;
+  }
+  .next1 {
+    width: 8%;
+    top: 40%;
+    right: -40px;
+    opacity: 0.5;
+  }
+  .prev1 {
+    width: 8%;
+    top: 40%;
+    left: -40px;
+    opacity: 0.5;
+  }
+  .menu li ul {
+    left: -40.5%;
+    top: 40px;
+  }
+
+  .brand_nav li {
+    font-size: 0.9rem;
+    width: 18%;
+  }
+  .brand li {
+    width: 22%;
+    padding: 1% 0;
+    background-color: #e7e7e7;
+    margin: 1%;
+    color: #908e8e;
+  }
+  .nav_box {
+    height: 0;
+    position: relative;
+    padding-top: 90%;
+    background-color: #e7e7e7;
+    overflow: hidden;
+  }
+  .nav_box img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+  }
+  .nav_box p {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    height: auto;
+    font-size: 0.7rem;
+  }
+  .box2 {
+    background-color: #e7e7e7;
+    box-sizing: border-box;
+  }
+  .box2 p {
+    bottom: 40%;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrap {
+    width: 99%;
+  }
+  .top_menu_nav {
+    display: none;
+  }
+  .logo {
+    width: 50%;
+  }
+  .intro_bg {
+    background-image: url(images/intro_360.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 670px;
+  }
+  .like,
+  .login {
+    display: none;
+  }
+  .logo {
+    margin-top: -20px;
+  }
+  .left_img {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .jewelry_con {
+    flex-direction: column;
+  }
+  .j_con_left {
+    flex: none;
+    width: 100%;
+  }
+  .j_con_right {
+    flex: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wedding_text {
+    color: white;
+    font-family: "Playfair Display", serif, sans-serif;
+    text-align: center;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .wed_text_title {
+    font-size: 2rem;
+  }
+  .wed_text {
+    font-size: 0.8rem;
+  }
+  .wed_text_box {
+    font-size: 0.8rem;
+  }
+  .wed_img {
+    width: 15%;
+  }
+  .wedding {
+    height: 460px;
+  }
+  .watch_con li:nth-child(1),
+  .watch_con li:nth-child(2),
+  .watch_con li:nth-child(3) {
+    width: 47%;
+    margin: 0px;
+  }
+  .watch_con li:nth-child(3) {
+    margin-left: -24px;
+  }
+  .watch_con li:nth-child(4) {
+    display: inline-block;
+  }
+  .watch_con li:nth-child(6) {
+    width: 96%;
+    margin: 0px;
+  }
+  .watch_con li:nth-child(5) {
+    display: none;
+  }
+  .tech_title {
+    font-size: 2.3rem;
+  }
+
+  .tech_box {
+    float: none;
+    margin: 0 auto;
+    margin-top: 290px;
+  }
+  .technic_text {
+    padding-top: 150px;
+    text-align: center;
+  }
+  .pinterest {
+    margin-top: 50px;
+  }
+  .pin_con li {
+    width: 90%;
+    margin: 0px;
+    margin-top: 20px;
+  }
+  .pin_con li img {
+    margin: 0;
+  }
+  .pin_text_con {
+    font-size: 1rem;
+  }
+  .pin_title p {
+    font-size: 1.4rem;
+  }
+  .pin_title img {
+    width: 60%;
+  }
+  .acc {
+    height: 220px;
+    margin-top: 50px;
+    background-size: cover;
+  }
+  .acc_box {
+    font-size: 0.2rem;
+    width: 100px;
+    padding: 5px;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+  }
+  .service li:nth-child(2),
+  .service li:nth-child(4),
+  .service li:nth-child(2),
+  .service li:nth-child(5),
+  .service li:nth-child(7) {
+    display: none;
+  }
+  .service_con li {
+    width: 48%;
+    margin: 0.1px;
+  }
+  .service_wrap2 {
+    display: block;
+  }
+  .service {
+    margin-top: 50px;
+  }
+  .next1 {
+    width: 20%;
+    top: 40%;
+    right: -20px;
+    opacity: 0.5;
+  }
+  .prev1 {
+    width: 20%;
+    top: 40%;
+    left: -20px;
+    opacity: 0.5;
+  }
+  .celeb_title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .celeb_title span {
+    font-size: 2.5rem;
+  }
+  .bottom_text {
+    flex-direction: column;
+  }
+
+  .bottom_text li {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .bottom_title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .bottom_text li:nth-child(2),
+  .bottom_text li:nth-child(3) {
+    margin-top: 40px;
+  }
+  .bottom_text2_right img {
+    width: 40%;
+  }
+  .bottom_text2 {
+    flex-direction: column;
+    margin: 10px;
+  }
+  .bottom_text2_right {
+    margin-top: 30px;
+    text-align: left;
+    margin-bottom: -30px;
+  }
+  .service {
+    margin-top: 100px;
+  }
+  .top_nav1_right p {
+    display: none;
+  }
+  .top_nav1_left {
+    visibility: visible;
+    width: 13.5%;
+    filter: brightness(0%);
+    margin-bottom: -50px;
+  }
+  .search {
+    width: 110%;
+  }
+}

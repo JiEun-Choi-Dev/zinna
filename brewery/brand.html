@@ -1,0 +1,495 @@
+<!Doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>배상면주가</title>
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="favicon.ico">
+        <link href="brand.css" rel="stylesheet" type="text/css">
+		<link href="./js/slick.css" rel="stylesheet" type="text/css">
+		<link href="./js/slick-theme.css" rel="stylesheet" type="text/css">
+		<link href="./js/swiper.min.css" rel="stylesheet" type="text/css">
+		<link href="animate.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="./js/jquery-1.12.4.min.js">
+		</script>
+		<script type="text/javascript" src="./js/slick.js">		
+		</script>
+		<script type="text/javascript" src="./js/swiper.min.js">		
+		</script>
+		<script type="text/javascript" src="./js/wow.min.js">		
+		</script>
+		<script type="text/javascript">
+			new WOW().init();
+		</script>
+		<script type="text/javascript">	
+			$(function() {
+				//슬라이드 다운메뉴
+				$(".title320").click(function(){
+				var index=$(".title320").index(this);
+				if($(".sub").eq(index).css("display") !="block"){
+					$(".sub").slideUp();
+					$(".sub").eq(index).slideDown();
+
+				}
+				else{
+					$(".sub").eq(index).slideUp();
+				}
+			});
+				
+			});
+
+		
+		$(document).ready(function(){
+			//top버튼
+			if($(this).scrollTop()==0){
+					$(".totop_con").hide();
+				}
+			$(document).scroll(function(){
+				if($(this).scrollTop()>0){
+					$(".totop_con").show();
+				}
+				else{$(".totop_con").hide();
+				}
+			})
+			$(".totop_con").click(function(){
+				$("html,body").animate({
+					scrollTop:0
+				},150)
+			});
+			//pc메뉴
+			$(".top_nav_title,.sub_title,.top_nav,.sub_title li").mouseenter(function(){$(this).css("color","white");
+				$("ul:not(:animated), .top_nav").stop().slideDown(200);
+				$("ul:not(:animated), .top_nav_title").stop().slideDown(200);
+				$("ul:not(:animated), .sub_title").stop().slideDown(200);
+			})
+			$(".top_nav,.top_nav_title,.sub_title,top_nav,.sub_title li").mouseleave(function(){$(this).css("color","white");
+				$(".sub_title").stop().slideUp(200);
+				$(".sub_title li").css("color","#dbdad8");
+				
+			});
+				$(".sub-level").css("display","none");
+		});
+		//슬라이드 높이영역
+			function functhisSize(){
+			var size= window.innerHeight;
+			console.log(size);
+			$("#topmenuArea").css("height",size+"px");}
+			$(function(){
+				$(window).resize(functhisSize);
+				functhisSize();
+			});
+		
+	$(function() {
+				$(".story1_320").click(function(){
+				var index=$(".story1_320").index(this);
+				if($(".story_320_con1,.story_320_con1_1").eq(index).css("display") !="block"){
+					$(".story_320_con1,.story_320_con1_1").slideUp();
+					$(".story_320_con1,.story_320_con1_1").eq(index).slideDown();
+				}
+				else{
+					$(".story_320_con1,.story_320_con1_1").eq(index).slideUp();
+				}
+			})
+			});
+			//모바일 메뉴 슬라이드
+			window.onload=function(){
+				var burger = $('.menu-trigger');
+
+				burger.each(function(index){
+					var $this = $(this);
+
+					$this.on('click', function(e){
+						e.preventDefault();
+						$(this).toggleClass('active-' + (index+1));
+					})
+					});
+			}
+
+			
+			$(document).ready(function(){
+				  $('.menu-trigger').click(function(){
+					$('.slide-in-menu').toggleClass('active_1');
+				  });
+
+				  /* sub level menu display */
+
+				  $('.icon').click(function(){
+
+				   $(this).closest('.has-sub').find('.sub-level').slideToggle();   
+					var t = $(this).closest('.has-sub').find('.sub-level'); 
+					$('.sub-level').not(t).slideUp();
+				   });
+
+				});
+	</script>
+    </head>
+    <body style="overflow-x:hidden; overflow-y:auto;">
+        <header>
+               <div class="top">
+				<div class="top_menu_bg">
+					<div class="wrap">
+						<ul class="top_menu">
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+							<li><a href="#">고객센터</a></li>
+							<li><a href="#"><img src="images/search.png" alt="search"></a></li>
+						</ul>
+						<a href="index.html"><img class="top_logo" src="images/top_logo.png" width="200px" alt="logo"></a>
+					</div>
+				</div>
+				<div class="top_nav_bg">
+					<div class="wrap">
+						<ul class="top_nav">
+							<li class="top_nav_title"><a href="#">회사소개
+								<ul class="sub_title">
+									<li><a href="brand.html">CEO 인사말</a></li>
+									<li><a href="brand.html">배상면주가의 이야기</a></li>
+									<li><a href="brand.html">배산명주가의 자취</a></li>
+									<li><a href="brand.html">찾아오시는길</a></li>
+								</ul>
+								</a></li>
+							<li class="top_nav_title"><a href="#">제품소개
+								<ul class="sub_title">
+									<li><a href="product.html">전체제품</a></li>
+									<li><a href="product.html">발효주</a></li>
+									<li><a href="product.html">증류주</a></li>
+									<li><a href="product.html">과실주</a></li>
+									<a href="product.html"><li>선물세트</li></a>
+								</ul>
+								</a>
+							</li>
+							<li class="top_nav_title"><a href="#">느린마을
+								<ul class="sub_title">
+									<li><a href="brand.html">느린마을 소개</a></li>
+									<li><a href="brand.html">느린마을 제품</a></li>
+									<li><a href="brand.html">Brewery &amp; Pub</a></li>
+									<li><a href="brand.html">판매점 및 지점</a></li>
+								</ul>
+								</a>
+							</li>
+							<li class="top_nav_title"><a href="#">알림마당
+								<ul class="sub_title">
+									<li><a href="brand.html">공지사항</a></li>
+									<li><a href="brand.html">배산명주가의 소식</a></li>
+								</ul>
+								</a>
+							</li>
+							<li class="top_nav_title"><a href="#">참여마당
+								<ul class="sub_title">
+									<li><a href="product.html">EVENT</a></li>
+									<li><a href="product.html">당첨차안내</a></li>
+									<li><a href="product.html">전통술 교육</a></li>
+									<li><a href="product.html">전통술 파티</a></li>
+								</ul>
+								</a>
+							</li>
+							<li><a href="http://www.sansawon.co.kr/">산사원 박물관</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="top_icon_bg">
+					<div class="wrap">
+						<ul class="top_icon">
+							<li class="top_icon_menu">
+								<div class="menu-trigger">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</li>
+							<li class="top_icon_logo"><a href="index.html"><img src="images/logo_icon_mobile.png" alt="logo"></a></li>	
+							<li class="top_icon_my"><a href="#"><img src="images/my_icon.png" alt="my"></a></li>
+						</ul>
+						<div class="slide-in-menu">
+							<ul class="first-level">
+								<li class="has-sub"><a href="#">회사소개<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="brand.html">CEO 인사말</a></li>
+									<li><a href="brand.html">배상면주가의 이야기</a></li>
+									<li><a href="brand.html">배산명주가의 자취</a></li>
+									<li><a href="brand.html">찾아오시는길</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">제품소개<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">전체제품</a></li>
+									<li><a href="product.html">발효주</a></li>
+									<li><a href="product.html">증류주</a></li>
+									<li><a href="product.html">과실주</a></li>
+									<li><a href="product.html">선물세트</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">느린마을<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="brand.html">느린마을 소개</a></li>
+									<li><a href="brand.html">느린마을 제품</a></li>
+									<li><a href="brand.html">Brewery &amp; Pub</a></li>
+									<li><a href="brand.html">판매점 및 지점</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">알림마당<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="brand.html">공지사항</a></li>
+									<li><a href="brand.html">배상면주가의 소식</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">참여마당<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">EVENT</a></li>
+									<li><a href="product.html">당첨차안내</a></li>
+									<li><a href="product.html">전통술 교육</a></li>
+									<li><a href="product.html">전통술 파티</a></li>
+								  </ul>
+								</li>
+								<li><a href="http://www.sansawon.co.kr">산사원 박물관</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="intro_bg">
+                <div class="intro_bg_contain">
+                    <div class="intro_bg_title  wow fadeInUp">
+                        <p class="intro_title1">
+                            우리 술, 우리 문화
+                        </p>
+                        <p class="intro_title2">
+                            배상면주가의 이야기
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="con_vision">
+            <div class="wrap">
+				<div class="vision">
+					<div class="vision_text wow slideInLeft">
+						<p class="vision_text_title">VISION
+						</p>
+						<p class="vision_text_con">
+						세계 최고의 술문화를<br>
+						선도하는 기업</p>
+					</div>
+					  <img class="vision_img wow slideInRight" src="images/con%20(1).png" width="45%" alt="world">
+				</div>
+                <div class="vision_con wow fadeInUp">
+                아시아 최고의 술문화 기업이란 단지 규모가 큰 회사를 말하는 것이 아닙니다.<br>
+					다만 저희는 ‘아시아권’에서 ‘술’ 또는 ‘술문화’와 관련하여<br> 
+					최고의 기업이 되고자 합니다.<br>
+					우리 회사는 아시아의 수많은 술 회사들 중에서 술과 관련된 문화를<br>
+					다듬고 가꾸어 퍼뜨리는 선구자가 되겠습니다.
+                </div>
+            </div>
+        </section>
+        <section class="con_mission">
+            <div class="wrap">
+				<div class="mission">
+				  <img class="mission_img wow slideInLeft" src="images/con%20(2).png" width="45%" alt="together">
+					<div class="mission_text wow slideInRight">
+						<p class="mission_text_title">MISSION
+						</p>
+						<p class="mission_text_con">
+						다양한 문화와 가치가<br>
+						평화롭게 공존하는 세상</p>
+					</div>
+				</div>
+                <div class="mission_con wow fadeInUp">
+                우리는 정성껏 만든 상품을 매개로 소비자와 함께 세상에 이로운 일을 하려 합니다.<br>
+				자유와 평화, 이해와 관용, 배려와 존중, 희망과 용기, 절제와 희생<br>
+				이런 좋은 가치들이 더욱 힘을 얻고 번성할 수 있도록 우리의 제품에<br>
+				혼을 담아 세상에 전파하고자 합니다.
+                </div>
+            </div>
+        </section>
+        <section class="con_story">
+            <div class="wrap">
+				<ul class="story_320">
+					<li>
+						<div class="story_320_wrap">
+							<p class="story1_320">
+                                20년
+                            </p>
+							<div class="story_320_con1_1">
+							 <p class="story2_320">
+                                한결같은 마음으로<br> 
+                                이름을 걸고 정성으로 빚는 술
+                                </p>
+								<img class="story_img1" src="images/con2%20(1).png"
+                             width="100%" alt="boss">
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="story_320_wrap" style="border-color:#343333">
+							<p class="story1_320" style="background-color: #343333;border-color:#343333 ">
+                               처음과 끝
+                            </p>
+							<div class="story_320_con1">
+							 <p class="story2_320">
+                                 처음부터 끝까지<br>
+                                개발/제조/유통을<br> 
+                                우리손으로
+                                </p>
+								<img class="story_img1" src="images/con2%20(2).png"
+                             width="100%" alt="make">
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="story_320_wrap">
+							<p class="story1_320">
+                                예:술
+                            </p>
+							<div class="story_320_con1">
+							 <p class="story2_320">
+                                  산사원, 전통갤러리<br>
+                                가양주교실, 우곡기념관 등의<br>
+                                다양한 문화사업로
+                                </p>
+								<img class="story_img1" src="images/con2%20(3).png"
+                             width="100%" alt="culture">
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="story_320_wrap" style="border-color:#343333">
+							<p class="story1_320" style="background-color: #343333;">
+                                더불어 함께
+                            </p>
+							<div class="story_320_con1">
+							 <p class="story2_320">
+                               고창,청송의 양원으로<br>
+                                 지역경제활성화 도모와<br>
+                                느린마을 양조장 &amp; 펍<br>
+                                동네방네 양조 사업을 통한<br>
+                                도심 속 양조장 실현
+                                </p>
+								<img class="story_img1" src="images/con2%20(4).png"
+                             width="100%" alt="together">
+							</div>
+						</div>
+					</li>
+				</ul>
+                <ul class="story">
+                    <li>
+						<div class="story_text wow fadeInLeft">
+                            <p class="stroy1">
+                                20년
+                            </p>
+                            <p class="stroy2">
+                                한결같은 마음으로<br> 
+                                이름을 걸고 정성으로 빚는 술
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+						<div class="story_wrap"><img class="story_img1" src="images/con2%20(1).png"
+                             width="100%" alt="boss"></div></li>
+                    <li>
+						<div class="story_wrap"><img class="story_img2" src="images/con2%20(2).png"
+													 width="100%" alt="make"></div></li>
+                    <li>
+                        <div class="story_text2 wow fadeInRight">
+                            <p class="stroy1_2">
+                                처음과 끝
+                            </p>
+                            <p class="stroy2_2">
+                                 처음부터 끝까지<br>
+                                개발/제조/유통을<br> 
+                                우리손으로
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="story_text3 wow fadeInLeft">
+                            <p class="stroy1_3">
+                                예:술
+                            </p>
+                            <p class="stroy2_3">
+                                 산사원, 전통갤러리<br>
+                                가양주교실, 우곡기념관 등의<br>
+                                다양한 문화사업로
+                            </p>
+                        </div>
+                    </li>
+                    <li><div class="story_wrap"><img class="story_img3"  src="images/con2%20(3).png"
+													  width="100%" alt="culture"></div></li>
+                          <li><div class="story_wrap"><img class="story_img4" src="images/con2%20(4).png"
+														   width="100%" alt="together"></div></li>
+                    <li>
+                        <div class="story_text4 wow fadeInRight">
+                            <p class="stroy1_4">
+                                더불어 함께
+                            </p>
+                            <p class="stroy2_4">
+                                고창,청송의 양원으로<br>
+                                 지역경제활성화 도모와<br>
+                                느린마을 양조장 &amp; 펍<br>
+                                동네방네 양조 사업을 통한<br>
+                                도심 속 양조장 실현
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="con_ci">
+            <div class="wrap">
+                <div class="ci_text">
+                    <p class="ci_text1">
+                        배상면주가의 CI
+                    </p>
+                    <p class="ci_text2">
+                        다양한 문화와 가치가 평화롭게 공존하는 세상을 만들고자 하는 배상면주가의 기업철학을<br>
+                        <span class="ci_text_po1">찬란한 태양</span>과 그 속에 사는 <span class="ci_text_po1">삼족오</span>를 통해 표현했습니다.
+                    </p>
+                    <p class="ci_text3">
+                        삼족오란?
+                    </p>
+                    <p class="ci_text4">
+                        동아시아 문화권의 전설 속에서 등장하는 태양 속에서 사는 세 개의 다리를 가진 신성한 새로<br>
+                        삼족오의 다리는 천(<span class="ci_text_po2">天</span>), 지(<span class="ci_text_po2">地</span>), 인(<span class="ci_text_po2">人</span>), 삼재(<span class="ci_text_po2">三材</span>)를 나타내며,<br>
+						이 세상을 구성하는 근원과 음양 조화의 의미를 담고 있습니다.
+                    </p>
+                </div>
+                <ul class="ci_making">
+					<li><img src="images/con3%20(2).png" width="80%" alt="logo"></li>
+					<li><img src="images/con3%20(3).png" width="80%" alt="logo"></li>
+					<li><img src="images/con3%20(4).png" width="80%" alt="logo"></li>
+					<li><img src="images/con3%20(1).png" width="80%" alt="logo"></li>
+            	</ul>
+            </div>
+        </section>
+		<footer>
+			<div class="bottom_bg1">
+				<div class="wrap">
+					<ul class="sns_list">
+						<li><a href="#"><img src="images/sns_facebook_white.png" width="60%" alt="facebook"></a></li>
+						<li><a href="#"><img src="images/sns_twitter_white.png" width="60%" alt="twitter"></a></li>
+						<li><a href="#"><img src="images/sns_insta_white.png" width="60%" alt="insta"></a></li>
+						<li><a href="#"><img src="images/sns_blog_white.png" width="60%" alt="blog"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom_bg2">
+				<div class="wrap">
+					<ul class="bottom_text">
+						<li><img class="bottom_img1" src="images/bottom_logo.png" width="60%" alt="logo">
+						<img class="bottom_img2" src="images/bottom_logo320.png" width="60%" alt="logo">
+						</li>
+						<li>(주)배상면주가 서울특별시 서초구 강남대로 27길 7-9 우곡빌딩 6층<br> 
+						사업자 등록번호 127-81-34503 대표이사 배영호<br> 
+						대표전화 1544-8550 팩스 02-6917-8828 franchise@soolsool.co.kr<br>
+						Copyright(C) 2019,Ji-Eun.Choi All Rights Reserved. Designed by Ji-Eun. Choi</li>
+					</ul>
+				</div>
+			</div>
+			<div style="width:40px;opacity: 0.7;" class="totop_con"><a href="#top">
+				<img src="images/top_btn.png" width="100%" alt="top">
+				<p style="font-size: 0.7rem;text-align: center;font-weight:bold">TOP</p></a>
+			</div>
+		</footer>
+    </body>  
+</html>

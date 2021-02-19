@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>배상면주가</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="favicon.ico">
+        <link href="product.css" rel="stylesheet" type="text/css">
+		<link href="./js/slick.css" rel="stylesheet" type="text/css">
+		<link href="./js/slick-theme.css" rel="stylesheet" type="text/css">
+		<link href="./js/swiper.min.css" rel="stylesheet" type="text/css">
+		<link href="animate.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="./js/jquery-1.12.4.min.js">
+		</script>
+		<script type="text/javascript" src="./js/slick.js">		
+		</script>
+		<script type="text/javascript" src="./js/swiper.min.js">		
+		</script>
+		<script type="text/javascript" src="./js/wow.min.js">		
+		</script>
+		<script type="text/javascript">
+			new WOW().init();
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			//top버튼
+			if($(this).scrollTop()==0){
+					$(".totop_con").hide();
+				}
+			$(document).scroll(function(){
+				if($(this).scrollTop()>0){
+					$(".totop_con").show();
+				}
+				else{$(".totop_con").hide();
+				}
+			})
+			$(".totop_con").click(function(){
+				$("html,body").animate({
+					scrollTop:0
+				},150)
+			});
+			//아락 제품 셋팅
+			$(".product_btn2,.product_btn3,.product_btn4,.product_btn5").css("filter","grayscale(100%)");
+				$(".con_detail").show();
+     			$(".con_detail1").hide();
+				 $(".con_detail2").hide();
+				 $(".con_detail3").hide();
+				 $(".con_detail4").hide();
+			//pc메뉴
+			$("#product_button1").css("background","#b20000").css("color","white");
+				$(".product_menu_text1").css("color","#f15d7d");
+			//
+			$(".top_nav_title,.sub_title,.top_nav,.sub_title li").mouseenter(function(){$(this).css("color","white");
+				$("ul:not(:animated), .top_nav").stop().slideDown(200);
+				$("ul:not(:animated), .top_nav_title").stop().slideDown(200);
+				$("ul:not(:animated), .sub_title").stop().slideDown(200);
+			})
+			$(".top_nav,.top_nav_title,.sub_title,top_nav,.sub_title li").mouseleave(function(){$(this).css("color","white");
+				$(".sub_title").stop().slideUp(200);
+				$(".sub_title li").css("color","#dbdad8");
+			});
+		});
+		
+			
+			$(function() {
+				$(".story1_320").click(function(){
+				var index=$(".story1_320").index(this);
+				if($(".story_320_con1,.story_320_con1_1").eq(index).css("display") !="block"){
+					$(".story_320_con1,.story_320_con1_1").slideUp();
+					$(".story_320_con1,.story_320_con1_1").eq(index).slideDown();
+				}
+				else{
+					$(".story_320_con1,.story_320_con1_1").eq(index).slideUp();
+				}
+			});
+				//food 슬라이더
+				$('.food_img2').slick({
+				dots:false,
+				autoplay:true,
+				infinite: true,
+				slidesToShow:1,
+				slidesToScroll:1,
+				autoplaySpeed:4000,
+				speed:2000,
+				vertical:false,
+				pauseOnHover:false,
+	            prevArrow:'.prev1',
+				nextArrow:'.next1',
+			});
+				//아락제품 셋팅
+						$(".product_btn1").click(function(){
+					$(".product_btn1").css("filter","grayscale(0%)");
+					$(".product_btn2").css("filter","grayscale(100%)");
+					$(".product_btn3").css("filter","grayscale(100%)");
+					$(".product_btn4").css("filter","grayscale(100%)");
+					$(".product_btn5").css("filter","grayscale(100%)");
+					$(".product_menu_text1").css("color","#f15d7d");
+					$(".product_menu_text2").css("color","gray");
+					$(".product_menu_text3").css("color","gray");
+					$(".product_menu_text4").css("color","gray");
+					$(".product_menu_text5").css("color","gray");
+					$(".con_detail").show();
+					$(".con_detail1").hide();
+					$(".con_detail2").hide();
+					$(".con_detail3").hide();
+					$(".con_detail4").hide();
+				});
+		
+			
+					$(".product_btn2").click(function(){
+					$(".product_btn2").css("filter","grayscale(0%)");
+					$(".product_btn1").css("filter","grayscale(100%)");
+					$(".product_btn3").css("filter","grayscale(100%)");
+					$(".product_btn4").css("filter","grayscale(100%)");
+					$(".product_btn5").css("filter","grayscale(100%)");
+					$(".product_menu_text2").css("color","#b77d20");
+					$(".product_menu_text1").css("color","gray");
+					$(".product_menu_text3").css("color","gray");
+					$(".product_menu_text4").css("color","gray");
+					$(".product_menu_text5").css("color","gray");
+					$(".con_detail1").show();
+					$(".con_detail").hide();
+					$(".con_detail2").hide();
+					$(".con_detail3").hide();
+					$(".con_detail4").hide();
+				});
+			
+					$(".product_btn3").click(function(){
+					$(".product_btn3").css("filter","grayscale(0%)");
+					$(".product_btn1").css("filter","grayscale(100%)");
+					$(".product_btn2").css("filter","grayscale(100%)");
+					$(".product_btn4").css("filter","grayscale(100%)");
+					$(".product_btn5").css("filter","grayscale(100%)");
+					$(".product_menu_text3").css("color","#ca1d48");
+					$(".product_menu_text1").css("color","gray");
+					$(".product_menu_text2").css("color","gray");
+					$(".product_menu_text4").css("color","gray");
+					$(".product_menu_text5").css("color","gray");
+					$(".con_detail2").show();
+					$(".con_detail1").hide();
+					$(".con_detail").hide();
+					$(".con_detail3").hide();
+					$(".con_detail4").hide();
+				});
+		
+					$(".product_btn4").click(function(){
+					$(".product_btn4").css("filter","grayscale(0%)");
+					$(".product_btn1").css("filter","grayscale(100%)");
+					$(".product_btn2").css("filter","grayscale(100%)");
+					$(".product_btn3").css("filter","grayscale(100%)");
+					$(".product_btn5").css("filter","grayscale(100%)");
+					$(".product_menu_text4").css("color","#53284e");
+					$(".product_menu_text1").css("color","gray");
+					$(".product_menu_text2").css("color","gray");
+					$(".product_menu_text3").css("color","gray");
+					$(".product_menu_text5").css("color","gray");
+					$(".con_detail3").show();
+					$(".con_detail1").hide();
+					$(".con_detail2").hide();
+					$(".con_detail").hide();
+					$(".con_detail4").hide();
+				});
+		
+					$(".product_btn5").click(function(){
+					$(".product_btn5").css("filter","grayscale(0%)");
+					$(".product_btn1").css("filter","grayscale(100%)");
+					$(".product_btn2").css("filter","grayscale(100%)");
+					$(".product_btn3").css("filter","grayscale(100%)");
+					$(".product_btn4").css("filter","grayscale(100%)");
+					$(".product_menu_text5").css("color","#9f4052");
+					$(".product_menu_text1").css("color","gray");
+					$(".product_menu_text2").css("color","gray");
+					$(".product_menu_text3").css("color","gray");
+					$(".product_menu_text4").css("color","gray");
+					$(".con_detail4").show();
+					$(".con_detail1").hide();
+					$(".con_detail2").hide();
+					$(".con_detail3").hide();
+					$(".con_detail").hide();
+				});
+			
+					$("#product_button1").click(function(){
+					$("#product_button1").css("background-color","#b20000").css("color","white");
+					$("#product_button2").css("background-color","white").css("color","#b20000");
+					$("#product_button3").css("background-color","white").css("color","#b20000");
+					$("#product_button4").css("background-color","white").css("color","#b20000");
+					$("#product_button5").css("background-color","white").css("color","#b20000");
+					$(".con_detail").show();
+					$(".con_detail1").hide();
+					$(".con_detail2").hide();
+					$(".con_detail3").hide();
+					$(".con_detail4").hide();
+				});
+			
+					$("#product_button2").click(function(){
+					$("#product_button2").css("background-color","#b20000").css("color","white");
+					$("#product_button1").css("background-color","white").css("color","#b20000");
+					$("#product_button3").css("background-color","white").css("color","#b20000");
+					$("#product_button4").css("background-color","white").css("color","#b20000");
+					$("#product_button5").css("background-color","white").css("color","#b20000");
+					$(".con_detail1").show();
+					$(".con_detail").hide();
+					$(".con_detail2").hide();
+					$(".con_detail3").hide();
+					$(".con_detail4").hide();
+				});
+			
+					$("#product_button3").click(function(){
+					$("#product_button3").css("background-color","#b20000").css("color","white");
+					$("#product_button2").css("background-color","white").css("color","#b20000");
+					$("#product_button1").css("background-color","white").css("color","#b20000");
+					$("#product_button4").css("background-color","white").css("color","#b20000");
+					$("#product_button5").css("background-color","white").css("color","#b20000");
+					$(".con_detail2").show();
+					$(".con_detail1").hide();
+					$(".con_detail").hide();
+					$(".con_detail3").hide();
+					$(".con_detail4").hide();
+				});
+		
+					$("#product_button4").click(function(){
+					$("#product_button4").css("background-color","#b20000").css("color","white");
+					$("#product_button2").css("background-color","white").css("color","#b20000");
+					$("#product_button3").css("background-color","white").css("color","#b20000");
+					$("#product_button1").css("background-color","white").css("color","#b20000");
+					$("#product_button5").css("background-color","white").css("color","#b20000");
+					$(".con_detail3").show();
+					$(".con_detail1").hide();
+					$(".con_detail2").hide();
+					$(".con_detail").hide();
+					$(".con_detail4").hide();
+				});
+			
+					$("#product_button5").click(function(){
+					$("#product_button5").css("background-color","#b20000").css("color","white");
+					$("#product_button2").css("background-color","white").css("color","#b20000");
+					$("#product_button3").css("background-color","white").css("color","#b20000");
+					$("#product_button1").css("background-color","white").css("color","#b20000");
+					$("#product_button4").css("background-color","white").css("color","#b20000");
+					$(".con_detail4").show();
+					$(".con_detail1").hide();
+					$(".con_detail2").hide();
+					$(".con_detail").hide();
+					$(".con_detail3").hide();
+				});
+			
+			});
+			
+
+		
+			//윈도우 높이영역
+			function functhisSize(){
+			var size= window.innerHeight;
+			console.log(size);
+			$("#topmenuArea").css("height",size+"px");}
+			$(function(){
+				$(window).resize(functhisSize);
+				functhisSize();
+			});
+				window.onload=function(){
+				var burger = $('.menu-trigger');
+
+				burger.each(function(index){
+					var $this = $(this);
+
+					$this.on('click', function(e){
+						e.preventDefault();
+						$(this).toggleClass('active-' + (index+1));
+					})
+					});
+			}
+
+			
+			$(document).ready(function(){
+				  $('.menu-trigger').click(function(){
+					$('.slide-in-menu').toggleClass('active_1');
+				  });
+
+				  /* sub level menu display */
+
+				  $('.icon').click(function(){
+
+				   $(this).closest('.has-sub').find('.sub-level').slideToggle();   
+					var t = $(this).closest('.has-sub').find('.sub-level'); 
+					$('.sub-level').not(t).slideUp();
+				   });
+
+				});
+		
+		</script>
+    </head>
+    <body>
+        <header>
+			<div class="top">
+				<div class="top_menu_bg">
+					<div class="wrap">
+						<ul class="top_menu">
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+							<li><a href="#">고객센터</a></li>
+							<li><a href="#"><img src="images/search.png"  alt="search"></a></li>
+						</ul>
+						<a href="index.html"><img class="top_logo" src="images/top_logo.png" width="200px" alt="logo"></a>
+					</div>
+				</div>
+				<div class="top_nav_bg">
+					<div class="wrap">
+						<ul class="top_nav">
+							<li class="top_nav_title"><a href="#">회사소개
+								<ul class="sub_title">
+									<li><a href="brand.html">CEO 인사말</a></li>
+									<li><a href="brand.html">배상면주가의 이야기</a></li>
+									<li><a href="brand.html">배산명주가의 자취</a></li>
+									<li><a href="brand.html">찾아오시는길</a></li>
+								</ul>
+								</a>
+							</li>
+							<li class="top_nav_title"><a href="#">제품소개
+								<ul class="sub_title">
+									<li><a href="product.html">전체제품</a></li>
+									<li><a href="product.html">발효주</a></li>
+									<li><a href="product.html">증류주</a></li>
+									<li><a href="product.html">과실주</a></li>
+									<a href="#"><li>선물세트</li></a>
+								</ul>
+								</a>
+							</li>
+							<li class="top_nav_title"><a href="#">느린마을
+								<ul class="sub_title">
+									<li><a href="brand.html">느린마을 소개</a></li>
+									<li><a href="brand.html">느린마을 제품</a></li>
+									<li><a href="brand.html">Brewery &amp; Pub</a></li>
+									<li><a href="brand.html">판매점 및 지점</a></li>
+								</ul>
+								</a>
+							</li>
+							<li class="top_nav_title"><a href="#">알림마당
+								<ul class="sub_title">
+									<li><a href="brand.html">공지사항</a></li>
+									<li><a href="brand.html">배산명주가의 소식</a></li>
+								</ul>
+								</a>
+							</li>
+							<li class="top_nav_title"><a href="#">참여마당
+								<ul class="sub_title">
+									<li><a href="product.html">EVENT</a></li>
+									<li><a href="product.html">당첨차안내</a></li>
+									<li><a href="product.html">전통술 교육</a></li>
+									<li><a href="product.html">전통술 파티</a></li>
+								</ul>
+								</a>
+							</li>
+							<li><a href="http://www.sansawon.co.kr/">산사원 박물관</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="top_icon_bg">
+					<div class="wrap">
+						<ul class="top_icon">
+							<li class="top_icon_menu">
+								<div class="menu-trigger">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</li>
+							<li class="top_icon_logo"><a href="index.html"><img src="images/logo_icon_mobile.png" alt="logo"></a>
+							</li>	
+							<li class="top_icon_my"><a href="#"><img src="images/my_icon.png" alt="my"></a>
+							</li>
+						</ul>
+					<div class="slide-in-menu">
+							<ul class="first-level">
+								<li class="has-sub"><a href="#">회사소개<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="brand.html">CEO 인사말</a></li>
+									<li><a href="brand.html">배상면주가의 이야기</a></li>
+									<li><a href="brand.html">배산명주가의 자취</a></li>
+									<li><a href="brand.html">찾아오시는길</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">제품소개<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">전체제품</a></li>
+									<li><a href="product.html">발효주</a></li>
+									<li><a href="product.html">증류주</a></li>
+									<li><a href="product.html">과실주</a></li>
+									<li><a href="product.html">선물세트</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">느린마을<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="brand.html">느린마을 소개</a></li>
+									<li><a href="brand.html">느린마을 제품</a></li>
+									<li><a href="brand.html">Brewery &amp; Pub</a></li>
+									<li><a href="brand.html">판매점 및 지점</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">알림마당<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="brand.html">공지사항</a></li>
+									<li><a href="brand.html">배상면주가의 소식</a></li>
+								  </ul>
+								</li>
+								<li class="has-sub"><a href="#">참여마당<span class="icon"></span></a>
+								<ul class="sub-level">
+									<li><a href="product.html">EVENT</a></li>
+									<li><a href="product.html">당첨차안내</a></li>
+									<li><a href="product.html">전통술 교육</a></li>
+									<li><a href="product.html">전통술 파티</a></li>
+								  </ul>
+								</li>
+								<li><a href="http://www.sansawon.co.kr">산사원 박물관</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="intro_bg">
+                <div class="intro_bg_contain">
+                    <div class="intro_bg_title wow zoomIn">
+                        <div class="intro_title0">
+                            <p>ARAQ</p>
+                            <p class="line"></p>
+                            <p>아락</p>
+                        </div>
+                        <p class="intro_title1">
+                            '아락'은 소주의 어원입니다.
+                        </p>
+                        <p class="intro_title2">
+                            세계 각국에서 불리우는 증류주의 공통어 '아락'<br>
+							각 지역의 풍토를 담아 서로 같지만 다른<br> 
+							품격 높은 소주를 '아락'이라는하나의 이름으로 빚습니다.
+													</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="con_product">
+            <div class="wrap">
+				<ul class="product_menu">
+					<li><img class="product_btn1" src="images/product%20(1)_1.png" width="60%" alt="apple_araq"><p class="product_menu_text1">청송사과</p></li>
+					<li><img class="product_btn2" src="images/product%20(2)_1.png" width="60%" alt="pear_araq"><p class="product_menu_text2">배</p></li>
+					<li><img class="product_btn3" src="images/product%20(3)_1.png" width="60%" alt="berry_araq"><p class="product_menu_text3">복분자</p></li>
+					<li><img class="product_btn4" src="images/product%20(4)_1.png" width="60%" alt="berry_araq"><p class="product_menu_text4">오디</p></li>
+					<li><img class="product_btn5" src="images/product%20(5)_1.png" width="60%" alt="sweetpatato_araq"><p style="margin-left: 8px" class="product_menu_text5">고구마</p></li>
+				</ul>
+				<div class="product_menu_320">
+					<div class="product_menu_320_con">
+						<p class="product_menu_320_button1" id="product_button1">사과</p>
+						<p class="product_menu_320_button1" id="product_button2">배</p>
+						<p class="product_menu_320_button1" id="product_button3" >복분자</p>
+						<p class="product_menu_320_button1" id="product_button4">오디</p>
+						<p class="product_menu_320_button1" id="product_button5">고구마</p>
+					</div>
+				</div>	
+            </div>
+        </section>
+        <section class="con_detail">
+            <div class="wrap">
+				<div class="product_title">
+					<p class="product_title1">배상면주가 고창 LB</p>
+					<p class="product_title2">청송사과 아락</p>
+					<p class="product_title3">‘청송사과 아락’은 청송의 쌀과 사과를 증류해 만든 소주로<br> 
+					쌀, 물, 사과 등의 원료를 모두 청송에서 생산된 것만을 사용하고<br>  
+					청송 농민과 함께 빚어 ‘가장 청송다운 술’을 만들고자 했습니다.<br> 
+					청송 쌀을 베이스로 하고 청송 사과로 풍미를 더해 상큼한 사과향과<br>  
+					깔끔한 맛을 느낄 수 있는 점이 특징입니다. 
+					</p>
+				</div>
+				<div class="detail_contain">
+					<div class="detail_ex">
+						<ul class="ditail_ex1">
+							<li><img src="images/product_dt%20(1).png" width="80%" alt="explain"><p class="ex1_1">주종</p>
+							<p class="ex1_2">증류주</p></li>
+							 <li><img src="images/product_dt%20(2).png" width="80%" alt="explain"><p class="ex1_1">용량</p>
+							<p class="ex1_2">500ml</p></li>
+							 <li><img src="images/product_dt%20(3).png" width="80%" alt="explain"><p class="ex1_1">도수</p>
+							<p class="ex1_2_1">40 °/25 °/17°</p></li>
+							 <li><img src="images/product_dt%20(4).png" width="80%" alt="explain"><p class="ex1_1">당도</p>
+							<p class="ex1_2">Dry</p></li>
+						</ul>
+						<p class="ex_text1">
+						지역: 전라북도
+						</p>
+						<p class="ex_text2">
+						주원료
+						</p>
+						<p class="ex_text3">
+						쌀증류원액 56.86%[쌀 32.1%(국내산), 국, 밀, 젖산, 효모]<br>
+						사과증류원액 26.74%[사과 81.5%(국내산), 액상과당, 효모]<br>
+						백설탕, 정제수
+						</p>
+					</div>
+					<div class="detail_img">
+						<div class="detail_img_con">
+							<img class="detail_img1" src="images/araq1.png" width="50%" alt="araq">
+							<img class="detail_img2 wow zoomIn" src="images/araq1_flower.png" width="100%" alt="araq">
+						</div>
+					</div>
+				</div>
+				<div class="detail_button">
+					<div class="button_all1">
+						<div class="button1">
+							<div class="button1_1">
+								<p class="button_text1">공유하기</p>
+							</div>
+						</div>
+					</div>
+					<div class="button_all2">
+					<div class="button2">
+						<div class="button2_1">
+							<p class="button_text2">판매처</p>
+						</div>
+					</div>
+					</div>
+				</div>
+            </div>
+        </section>
+		<section class="con_detail1">
+            <div class="wrap">
+				<div class="product_title">
+					<p class="product_title1">배상면주가 고창 LB</p>
+					<p style="color: #b77d20;" class="product_title2">나주배 아락</p>
+					<p class="product_title3">‘나주배 아락’은 고창의 쌀과 나주배를 증류해 만든 소주로<br> 
+					쌀, 물, 배 등의 원료를 모두 나주에서 생산된 것만을 사용하고<br>  
+					고창 농민과 함께 빚어 ‘가장 나주다운 술’을 만들고자 했습니다.<br> 
+					고창의 배 중 고유의 점 무늬가 크고,껍질이 얇은 맛좋은 꿀배를 엄선해<br>  풍부한 배향과 달콤하면서 깊은 풍미가 일품인 술입니다.
+					</p>
+				</div>
+				<div class="detail_contain">
+					<div class="detail_ex">
+						<ul class="ditail_ex1">
+							<li><img src="images/product_dt%20(1).png" width="80%" alt="explain"><p class="ex1_1">주종</p>
+							<p class="ex1_2">증류주</p></li>
+							 <li><img src="images/product_dt%20(2).png" width="80%" alt="explain"><p class="ex1_1">용량</p>
+							<p class="ex1_2">500ml</p></li>
+							 <li><img src="images/product_dt%20(3).png" width="80%" alt="explain"><p class="ex1_1">도수</p>
+							<p class="ex1_2_1">40 °/25 °/17°</p></li>
+							 <li><img src="images/product_dt%20(4).png" width="80%" alt="explain"><p class="ex1_1">당도</p>
+							<p class="ex1_2">Dry</p></li>
+						</ul>
+						<p class="ex_text1">
+						지역: 전라북도
+						</p>
+						<p class="ex_text2">
+						주원료
+						</p>
+						<p class="ex_text3">
+						쌀증류원액 56.86%[쌀 32.1%(국내산), 국, 밀, 젖산, 효모]<br>
+						배 증류원액 37.7%(국내산), 액상과당, 효모]<br>
+						백설탕, 정제수
+						</p>
+					</div>
+				<div class="detail_img">
+					<div class="detail_img_con">
+						<img class="detail_img1" src="images/araq2.png" width="50%" alt="araq">
+						<img style="right:-21%;top:-34%;" class="detail_img2 wow zoomIn" src="images/araq3_flower_1.png" width="100%" alt="araq">
+					</div>
+				</div>
+				</div>
+				<div class="detail_button">
+					<div class="button_all1">
+						<div class="button1">
+							<div class="button1_1">
+								<p class="button_text1">공유하기</p>
+							</div>
+						</div>
+					</div>
+					<div class="button_all2">
+						<div class="button2">
+							<div class="button2_1">
+								<p class="button_text2">판매처</p>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+		<section class="con_detail2">
+            <div class="wrap">
+				<div class="product_title">
+					<p  class="product_title1">배상면주가 고창 LB</p>
+					<p style="color: #ca1d48;" class="product_title2">복분자아락</p>
+					<p class="product_title3">‘복분자 아락’은 고창의 쌀과 복분자를 증류해 만든 소주로<br> 
+					쌀, 물, 복분자 등의 원료를 모두 고창에서 생산된 것만을 사용하고<br>  
+					나주 농민과 함께 빚어 ‘가장 고창다운 술’을 만들고자 했습니다.<br> 
+					선운산의 기운을 받아 자란 고창 복분자는 당도, 유효성분, <br>다양한 기능성이 뛰고품질의 복분자 아락을 즐기실 수 있습니다.
+					</p>
+				</div>
+				<div class="detail_contain">
+					<div class="detail_ex">
+						<ul class="ditail_ex1">
+							<li><img src="images/product_dt%20(1).png" width="80%" alt="explain"><p class="ex1_1">주종</p>
+							<p class="ex1_2">증류주</p></li>
+							 <li><img src="images/product_dt%20(2).png" width="80%" alt="explain"><p class="ex1_1">용량</p>
+							<p class="ex1_2">500ml</p></li>
+							 <li><img src="images/product_dt%20(3).png" width="80%" alt="explaain"><p class="ex1_1">도수</p>
+							<p class="ex1_2_1">40 °/25 °/17°</p></li>
+							 <li><img src="images/product_dt%20(4).png" width="80%" alt="explain"><p class="ex1_1">당도</p>
+							<p class="ex1_2">Dry</p></li>
+						</ul>
+						<p class="ex_text1">
+						지역: 전라북도
+						</p>
+						<p class="ex_text2">
+						주원료
+						</p>
+						<p class="ex_text3">
+						쌀증류원액 56.86%[쌀 32.1%(국내산), 국, 밀, 젖산, 효모]<br>
+						복분자 증류원액 67.9%(국내산), 액상과당, 효모]<br>
+						백설탕, 정제수
+						</p>
+					</div>
+				<div class="detail_img">
+					<div class="detail_img_con">
+						<img class="detail_img1" src="images/araq4.png" width="50%" alt="araq">
+						<img style="right: -22%;" class="detail_img2 wow zoomIn" id="araq_img4" src="images/araq4_flower.png" width="100%" alt="araq">
+					</div>
+				</div>
+				</div>
+				<div class="detail_button">
+					<div class="button_all1">
+						<div class="button1">
+							<div class="button1_1">
+								<p class="button_text1">공유하기</p>
+							</div>
+						</div>
+					</div>
+					<div class="button_all2">
+					<div class="button2">
+						<div class="button2_1">
+							<p class="button_text2">판매처</p>
+						</div>
+					</div>
+					</div>
+				</div>
+            </div>
+        </section>
+		<section class="con_detail3">
+            <div class="wrap">
+				<div class="product_title">
+					<p class="product_title1">배상면주가 고창 LB</p>
+					<p style="color: #53284e;" class="product_title2">오디아락</p>
+					<p class="product_title3">‘오디 아락’은 고창의 쌀과 오디를 증류해 만든 소주로<br> 
+					쌀, 물, 오디 등의 원료를 모두 고창에서 생산된 것만을 사용하고<br>  
+					나주 농민과 함께 빚어 ‘가장 고창다운 술’을 만들고자 했습니다.<br> 
+					오디 아락은 고창산 오디를 저온 숙성하여 은은한 오디의 향과<br>오디 천연의 감미를 
+					최대한 끌어올린 부드러운 증류주 입니다. 
+					</p>
+				</div>
+				<div class="detail_contain">
+					<div class="detail_ex">
+						<ul class="ditail_ex1">
+							<li><img src="images/product_dt%20(1).png" width="80%" alt="explain"><p class="ex1_1">주종</p>
+							<p class="ex1_2">증류주</p></li>
+							 <li><img src="images/product_dt%20(2).png" width="80%" alt="explain"><p class="ex1_1">용량</p>
+							<p class="ex1_2">500ml</p></li>
+							 <li><img src="images/product_dt%20(3).png" width="80%" alt="explain"><p class="ex1_1">도수</p>
+							<p class="ex1_2_1">40 °/25 °/17°</p></li>
+							 <li><img src="images/product_dt%20(4).png" width="80%" alt="explain"><p class="ex1_1">당도</p>
+							<p class="ex1_2">Dry</p></li>
+						</ul>
+						<p class="ex_text1">
+						지역: 전라북도
+						</p>
+						<p class="ex_text2">
+						주원료
+						</p>
+						<p class="ex_text3">
+						쌀증류원액 56.86%[쌀 32.1%(국내산), 국, 밀, 젖산, 효모]<br>
+						오디 증류원액 83.9%(국내산), 액상과당, 효모]<br>
+						백설탕, 정제수
+						</p>
+					</div>
+					<div class="detail_img">
+						<div class="detail_img_con">
+							<img class="detail_img1" src="images/araq3.png" width="50%" alt="araq">
+							<img style="right:-16%;" class="detail_img2 wow zoomIn" id="araq_3" src="images/araq2_flower_1_1.png" width="100%" alt="araq">
+						</div>
+					</div>
+				</div>
+				<div class="detail_button">
+					<div class="button_all1">
+						<div class="button1">
+							<div class="button1_1">
+								<p class="button_text1">공유하기</p>
+							</div>
+						</div>
+					</div>
+					<div class="button_all2">
+						<div class="button2">
+							<div class="button2_1">
+								<p class="button_text2">판매처</p>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+		<section class="con_detail4">
+            <div class="wrap">
+				<div class="product_title">
+					<p class="product_title1">배상면주가 고창 LB</p>
+					<p style="color: #9f4052;" class="product_title2">고구마아락</p>
+					<p class="product_title3">‘고구마 아락’은 고창의 쌀과 고구마를 증류해 만든 소주로<br> 
+					쌀, 물, 고구마 등의 원료를 모두 고창에서 생산된 것만을 사용하고<br>  
+					나주 농민과 함께 빚어 ‘가장 고창다운 술’을 만들고자 했습니다.<br> 
+					고구마 아락은 고창 황토 흙에서 자란 밤고구마와 보리를 원료로 빚어<br> 품격 높은 향기와 부드러운 맛이 일품입니다.
+					</p>
+				</div>
+				<div class="detail_contain">
+					<div class="detail_ex">
+						<ul class="ditail_ex1">
+							<li><img src="images/product_dt%20(1).png" width="80%" alt="explin"><p class="ex1_1">주종</p>
+							<p class="ex1_2">증류주</p></li>
+							 <li><img src="images/product_dt%20(2).png" width="80%" alt="explin"><p class="ex1_1">용량</p>
+							<p class="ex1_2">500ml</p></li>
+							 <li><img src="images/product_dt%20(3).png" width="80%" alt="explin"><p class="ex1_1">도수</p>
+							<p class="ex1_2_1">40 °/25 °/17°</p></li>
+							 <li><img src="images/product_dt%20(4).png" width="80%" alt="explin"><p class="ex1_1">당도</p>
+							<p class="ex1_2">sweet</p></li>
+						</ul>
+						<p class="ex_text1">
+						지역: 전라북도
+						</p>
+						<p class="ex_text2">
+						주원료
+						</p>
+						<p class="ex_text3">
+						쌀증류원액 56.86%[쌀 32.1%(국내산), 국, 밀, 젖산, 효모]<br>
+						증류원액 99.6%(보리 78%, 고구마21.6%)(국내산), 액상과당, 효모]<br>
+						백설탕, 정제수
+						</p>
+					</div>
+					<div class="detail_img">
+						<div class="detail_img_con">
+							<img class="detail_img1" src="images/araq5.png" width="50%" alt="araq">
+							<img style="top:-40%;right:-30%" class="detail_img2 wow zoomIn" src="images/araq5_flower_1.png" width="100%" alt="araq">
+						</div>
+					</div>
+				</div>
+				<div class="detail_button">
+					<div class="button_all1">
+						<div class="button1">
+							<div class="button1_1">
+								<p class="button_text1">공유하기</p>
+							</div>
+						</div>
+					</div>
+					<div class="button_all2">
+						<div class="button2">
+							<div class="button2_1">
+								<p class="button_text2">판매처</p>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+		<section class="con_with">
+			<div class="with_intro">
+				<div class="with_intro_con">
+					<div class="with_intro_title wow pulse">
+						<p class="with_intro_text1">With</p>
+						<p class="with_intro_text2">어울리는 음식과 칵테일 레시피로<br>
+						더욱 다양하게 즐겨보세요.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="con_with_food">
+			<div class="wrap">
+				<p class="food_title wow slideInUp">
+					With.<span class="title_po">FOOD</span>
+				</p>
+				<ul class="food_img">
+					<li class="wow slideInUp"><img src="images/food%20(1).png" width="" alt="octopus">
+						<div class="food_con">
+						매콤한<br><sapn class="food_con_po">주꾸미볶음</sapn></div></li>
+					<li class="wow slideInUp"><img src="images/food%20(2).png" width="" alt="shirimp"><div class="food_con">
+						고소한<br><sapn class="food_con_po">새우감바스</sapn></div></li>
+					<li class="wow slideInUp"><img src="images/food%20(3).png" width="" alt="polk"><div class="food_con">
+						담백한<br><sapn class="food_con_po">수육보쌈</sapn></div></li>
+					<li class="wow slideInUp"><img src="images/food%20(4).png" width="" alt="stew"><div class="food_con">
+						시원한<br><sapn class="food_con_po">꼬치어묵탕</sapn></div></li>
+				</ul>
+				<div class="food_img2">
+						<div class="single-items">
+					<li><img src="images/food%20(1).png" width="" alt="octopus">
+						<div class="food_con">
+						매콤한<br><sapn class="food_con_po">주꾸미볶음</sapn></div></li>
+						</div>
+						<div class="single-items">	
+					<li><img src="images/food%20(2).png" width="" alt="shirimp"><div class="food_con">
+						고소한<br><sapn class="food_con_po">새우감바스</sapn></div></li></div>
+					<div class="single-items">
+					<li><img src="images/food%20(3).png" width="" alt="polk"><div class="food_con">
+						담백한<br><sapn class="food_con_po">수육보쌈</sapn></div></li></div>
+					<div class="single-items">
+					<li><img src="images/food%20(4).png" width="" alt="stew"><div class="food_con">
+						시원한<br><sapn class="food_con_po">꼬치어묵탕</sapn></div></li></div>
+				</div>
+			</div>
+		</section>
+		<section class="con_with_recipe">
+			<div class="wrap">
+				<p class="recipe_title">
+					With.<span class="title_po">RECIPE</span>
+				</p>
+				<ul class="recipe_img">
+					<li><a href="#"><img src="images/cock%20(1).png" width="" alt="cocktail"><div class="recipe_hover_con">
+						<h3>온더락</h3>
+						<h5>(On The Rock)</h5>
+						<h4>아락 45ml<br>얼음</h4></div></a></li>
+					<li><a href="#"><img src="images/cock%20(2).png" width="" alt="cocktail"><div class="recipe_hover_con">	
+						<h3>마티니</h3>
+						<h5>(Martini)</h5>
+						<h4>아락 20ml
+						<br>진 20ml
+						<br>친자노 20ml
+						<br>레몬즙 2ml
+						</h4></div></a></li>
+					<li><a href="#"><img src="images/cock%20(3).png" width="" alt="cocktail"><div class="recipe_hover_con"><h3>체리블라썸</h3>
+						<h5>(Cherry Blossom)</h5>
+						<h4>아락 45ml
+						<br>체리주스 25ml
+						<br>오렌지주스 25ml
+						<br>샴페인 25ml
+						</h4></div></a>
+					</li>
+					<li><a href="#"><img src="images/cock%20(4).png" width="" alt="cocktail"><div class="recipe_hover_con"><h3>모히토</h3>
+						<h5>(Mojito)</h5>
+						<h4>아락 45ml
+						<br>민트
+						<br>라임 반개
+						<br>탄산수 45ml
+						<br>흑설탕
+						<br>얼음
+						</h4></div></a>
+					</li>
+					<li><a href="#"><img src="images/cock%20(5).png" width="" alt="cocktail"><div class="recipe_hover_con"><h3>그레이하운드</h3>
+						<h5>(Greyhound)</h5>
+						<h4>아락 45ml
+						<br>자몽주스 45ml
+						<br>소금 약간
+						</h4></div></a>
+					</li>
+					<li><a href="#"><img src="images/cock%20(6).png" width="" alt="cocktail"><div class="recipe_hover_con"><h3>베리굿</h3>
+						<h5>(Berry Good)</h5>
+						<h4>아락 45ml
+						<br>라임주스 25ml
+						<br>포도주스30ml
+						<br>꿀 1스푼
+						<br>탄산수 30ml
+						<br>블루베리
+						</h4></div></a></li>
+					<li><a href="#"><img src="images/cock%20(7).png" width="" alt="cocktail"><div class="recipe_hover_con"><h3>그린티아락</h3>
+						<h5>(Green Tea ARAQ)</h5>
+						<h4>아락 45ml
+						<br>녹차물45ml
+						<br>꿀 1스푼
+						<br>탄산수 90ml
+						<br>얼음
+						</h4></div></a>
+					</li>
+					<li><a href="#"><img src="images/cock%20(8).png" width="" alt="cocktail"><div class="recipe_hover_con"><h3>카페아락</h3>
+						<h5>(Cafe ARAQ)</h5>
+						<h4>아락 45ml
+						<br>커피45ml
+						</h4></div></a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<footer>
+			<div class="bottom_bg1">
+				<div class="wrap">
+					<ul class="sns_list">
+						<li><a href="#"><img src="images/sns_facebook_white.png" width="60%" alt="facebook"></a></li>
+						<li><a href="#"><img src="images/sns_twitter_white.png" width="60%" alt="twitter"></a></li>
+						<li><a href="#"><img src="images/sns_insta_white.png" width="60%" alt="insta"></a></li>
+						<li><a href="#"><img src="images/sns_blog_white.png" width="60%" alt="blog"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom_bg2">
+				<div class="wrap">
+					<ul class="bottom_text">
+						<li><img class="bottom_img1" src="images/bottom_logo.png" width="60%" alt="">
+						<img class="bottom_img2" src="images/bottom_logo320.png" width="60%" alt="logo">
+						</li>
+						<li>(주)배상면주가 서울특별시 서초구 강남대로 27길 7-9 우곡빌딩 6층<br> 
+						사업자 등록번호 127-81-34503 대표이사 배영호<br> 
+						대표전화 1544-8550 팩스 02-6917-8828 franchise@soolsool.co.kr<br>
+						Copyright(C) 2019,Ji-Eun.Choi All Rights Reserved. Designed by Ji-Eun. Choi</li>
+					</ul>
+				</div>
+			</div>
+			<div style="width:40px;opacity: 0.7;" class="totop_con"><a href="#top">
+				<img src="images/top_btn.png" width="100%" alt="top">
+				<p style="font-size: 0.7rem;text-align: center;font-weight:bold">TOP</p></a>
+			</div>
+		</footer>
+    </body>
+</html>

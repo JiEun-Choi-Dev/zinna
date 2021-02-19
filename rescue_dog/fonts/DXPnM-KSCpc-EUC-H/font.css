@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'DXPnM-KSCpc-EUC-H';
+  src: url('DXPnM-KSCpc-EUC-H.eot');
+  src: url('DXPnM-KSCpc-EUC-H.woff2') format('woff2'),
+       url('DXPnM-KSCpc-EUC-H.woff') format('woff'),
+       url('DXPnM-KSCpc-EUC-H.ttf') format('truetype'),
+       url('DXPnM-KSCpc-EUC-H.svg#DXPnM-KSCpc-EUC-H') format('svg'),
+       url('DXPnM-KSCpc-EUC-H.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
